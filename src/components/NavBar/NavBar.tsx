@@ -5,6 +5,7 @@ import scss from './navbar.module.scss'
 import clsx from 'clsx'
 
 import { LangIcon, LocationIcon } from '../../icon/headerIcon'
+import { useRouter } from 'next/router'
 
 
 interface NavLink {
@@ -63,27 +64,30 @@ const NAV_LINKS: NavLink[] = [
 ]
 
 
-export const NavBar = ({ asPath }: { asPath?: string }) => {
+export const NavBar = () => {
   const styleComponent = clsx('container', scss.headerContainer)
+  const { locale, pathname } = useRouter()
 
   return (
     <header className={scss.header}>
       <div className={styleComponent}>
         <div>
           <Link href={'/'}>
-            <LogoIcon />
+            <a>
+              <LogoIcon />
+            </a>
           </Link>
         </div>
         <nav className={scss.navBox}>
           <ul>
             {
-              NAV_LINKS.map((link, i) => <NavLink key={i} {...link} isActive={asPath === link.href} />)
+              NAV_LINKS.map((link, i) => <NavLink key={i} {...link} isActive={pathname.replace(/[^a-zа-яё0-9\s]/gi, '') === link.href} />)
             }
           </ul>
         </nav>
         <div className={scss.locationBox}>
-          <IconAndButton text="Estonia" Icon={LocationIcon} />
-          <IconAndButton text="Est" Icon={LangIcon} />
+          {/* <IconAndButton text="Estonia" Icon={LocationIcon} />
+          <IconAndButton text={locale} Icon={LangIcon} /> */}
         </div>
       </div>
     </header>

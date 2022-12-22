@@ -20,7 +20,7 @@ export const WhyUsSection = () => {
    <span className={style.CircleFigureII}>
     <CircleHome />
    </span>
-   <span className={style.bg}>
+   <span className={style.whyBg}>
     <img src={pattern.src} alt="" />
    </span>
    <span className={style.circleLogo}>

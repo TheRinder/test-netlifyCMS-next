@@ -3,7 +3,7 @@ import { BannerSection } from "./BannerSection";
 import { PackageSection } from "./PackageSection";
 import { PartnersSection } from "./PartnersSection";
 import { ServiceSection } from "./ServiceSection";
-// import { TestimonialsSection } from "./TestimonialsSection";
+import { TestimonialsSection } from "./TestimonialsSection";
 import { WhyUsSection } from "./WhyUsSection";
 
 export default function HomePage () {
@@ -14,7 +14,7 @@ export default function HomePage () {
       <WhyUsSection />
       <PackageSection />
       <PartnersSection />
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
     </>
   )
 }

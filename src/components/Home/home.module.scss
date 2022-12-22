@@ -74,6 +74,21 @@
  }
 }
 
+.whyBg {
+ img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  opacity: 0.22;
+ }
+}
+
 .circleLogo {
  position: absolute;
  z-index: 6;
@@ -245,6 +260,28 @@
  margin-top: 100px;
  margin-bottom: 137px;
 }
+.partnersGrid {
+ margin-top: 80px;
+ display: grid;
+ grid-template-columns: repeat(3, 33.33%);
+ .partnerItem {
+  width: 100%;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: cover;
+  }
+ }
+ .partnerItem:nth-child(2){
+  justify-content: center;
+ }
+ .partnerItem:nth-child(3){
+  justify-content: end;
+ }
+}
 
 .testimonialBox {
  margin-bottom: 152px;
@@ -275,6 +312,11 @@
      width: 44px;
      height: 44px;
      margin-right: 28px;
+     img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50px;
+     }
     }
     .testimonialAuthorImg {
      border-radius: 44px;
