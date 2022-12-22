@@ -1,0 +1,44 @@
+$textColorLang: #616161;
+.header {
+ position: relative;
+ z-index: 10;
+ display: flex;
+ align-items: center;
+ height: 78px;
+ width: 100%;
+ background: #ffffff;
+ box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.navBox {
+ ul {
+  list-style: none;
+  display: flex;
+  li {
+   margin-right: 28px;
+  }
+ }
+}
+
+.headerContainer {
+ display: flex;
+ justify-content: space-between;
+}
+
+.locationBox {
+ display: flex;
+ align-items: center;
+ div + div {
+  margin-left: 56px;
+ }
+}
+
+.locationText {
+ margin-left: 7px;
+ font-weight: 600;
+ font-size: 16px;
+ line-height: 20px;
+ text-transform: capitalize;
+
+ color: $textColorLang;
+}

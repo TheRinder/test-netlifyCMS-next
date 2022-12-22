@@ -1,0 +1,303 @@
+.bannerSection {
+ min-height: 807px;
+ width: 100%;
+ position: relative;
+ display: flex;
+ align-items: center;
+ // overflow: hidden;
+}
+
+.bannerTitle {
+ font-weight: 700;
+ font-size: 85px;
+ line-height: 95px;
+ color: #272d4e;
+ max-width: 818px;
+}
+
+.bannerText {
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 28px;
+ width: 511px;
+
+ margin-top: 42px;
+ color: #94a2b3;
+}
+
+.bannerLink {
+ background: #7854f7;
+ border-radius: 16px;
+
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 21px;
+
+ color: #fff;
+
+ display: inline-block;
+ margin-top: 28px;
+ padding: 25px 78px;
+}
+
+.figureImg {
+ position: absolute;
+ bottom: -67px;
+ right: 0px;
+ z-index: 1;
+}
+
+.bg {
+ img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 109%;
+  opacity: 0.22;
+ }
+ &::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 89px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.9) 100%);
+  position: absolute;
+  bottom: -73px;
+  right: 0;
+  left: 0;
+  z-index: 3;
+ }
+}
+
+.circleLogo {
+ position: absolute;
+ z-index: 6;
+ right: 0;
+ bottom: -250px;
+ // mix-blend-mode: overlay;
+ svg path {
+  // fill: #7854f7;
+ }
+}
+
+.figureCircle {
+ position: absolute;
+ z-index: 1;
+ right: 0px;
+ bottom: 169px;
+}
+
+.serviceBox {
+ margin: 72px auto 196px auto;
+ width: 1144px;
+ display: grid;
+ grid-template-columns: repeat(3, 360px);
+ grid-gap: 32px;
+ position: relative;
+ z-index: 4;
+}
+.serviceCard {
+ box-sizing: border-box;
+ padding: 16px;
+ background: #fff;
+ border-radius: 20px;
+ box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+ .serviceCardIcon {
+  display: flex;
+  justify-content: center;
+ }
+ .serviceCardTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+  text-align: center;
+
+  color: #272d4e;
+ }
+ .serviceCardText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0px 12px;
+
+  color: #94a2b3;
+ }
+}
+
+.whySection {
+ background: #7854f7;
+ padding: 32px 0px 52px 0px;
+ position: relative;
+ margin-bottom: 204px;
+ p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 70px;
+  text-align: center;
+
+  color: #ffffff;
+ }
+}
+
+.CircleFigureII {
+ position: absolute;
+ top: -214px;
+ left: 0px;
+}
+.packageBox {
+ display: flex;
+ // grid-template-columns: repeat(3, 380px);
+ gap: 32px;
+ width: 1204px;
+ margin: 72px auto 0px auto;
+ .packageCard {
+  width: 380px;
+  background: #ffffff;
+  border: 1px solid #eaecf0;
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 32px;
+  .packageCardIcon {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+  }
+  .packageCardLabel {
+   margin-top: 20px;
+   margin-bottom: 8px;
+
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 30px;
+   text-align: center;
+
+   color: #7854f7;
+  }
+  .packageCardPrice {
+   font-weight: 600;
+   font-size: 48px;
+   line-height: 60px;
+   text-align: center;
+   letter-spacing: -0.02em;
+   color: #101828;
+   span {
+    margin-left: 3px;
+    color: #667085;
+   }
+  }
+  .packageCardSub {
+   margin-top: 8px;
+
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: center;
+   color: #667085;
+  }
+  .packageCardAdvantages {
+   margin-top: 32px;
+   ul {
+    list-style: none;
+    li {
+     display: flex;
+     align-items: center;
+     margin-bottom: 16px;
+
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 24px;
+     color: #667085;
+     span {
+      margin-right: 12px;
+      margin-bottom: -5px;
+     }
+    }
+   }
+  }
+  .packageCardBtnBox {
+   margin-top: 64px;
+   width: 100%;
+   button {
+    width: 100%;
+    background: #7854f7;
+    border: 1px solid #7854f7;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 12px 0px;
+
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+   }
+  }
+ }
+}
+
+.partnersBox {
+ margin-top: 100px;
+ margin-bottom: 137px;
+}
+
+.testimonialBox {
+ margin-bottom: 152px;
+ .testimonialSubText {
+  margin: 56px 0px 72px 0px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #94a2b3;
+ }
+ .commentBox {
+  display: flex;
+  gap: 32px;
+  width: 1147px;
+  margin: 0px auto;
+  .testimonialCard {
+   background: #ffffff;
+   box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+   border-radius: 20px;
+   padding: 24px;
+   box-sizing: border-box;
+   .testimonialCardAuthor {
+    display: flex;
+    align-items: center;
+
+    .testimonialAuthorImgBox {
+     width: 44px;
+     height: 44px;
+     margin-right: 28px;
+    }
+    .testimonialAuthorImg {
+     border-radius: 44px;
+     max-width: 44px;
+     max-height: 44px;
+    }
+    .testimonialAuthorName {
+     font-weight: 700;
+     font-size: 18px;
+     line-height: 22px;
+
+     color: #222849;
+    }
+   }
+   .testimonialCardText {
+    margin-top: 16px;
+    p {
+     font-weight: 400;
+     font-size: 12px;
+     line-height: 22px;
+     color: #94a2b3;
+    }
+   }
+  }
+ }
+}
