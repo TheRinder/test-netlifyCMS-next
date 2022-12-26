@@ -2,6 +2,8 @@ import clsx from "clsx";
 import React from "react";
 import Link from "next/link";
 import style from './areas.module.scss'
+import pattern from '../../icon/bluer-pattern.png'
+
 
 interface Catagory {
  id: string,
@@ -50,14 +52,17 @@ const CategoryButton = (props: CategoryButtonType) => {
 
 export const CategoryNav = ({ activeId }: { activeId?: string }) => {
  return (
-  <div className={""} >
-   <div>
+  <div className={style.areasHeader} >
+   <div className='container'>
     <ul className={clsx(style.areasCatergory, 'container')}>
      {
       CATAGORY.map(cat => <CategoryButton key={cat.id} {...cat} activeId={activeId} />)
      }
     </ul>
    </div>
+   <span className={style.bg}>
+        <img src={pattern.src} />
+      </span>
   </div >
  )
 }

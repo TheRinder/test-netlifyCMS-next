@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 import style from './areas.module.scss'
 import { CategoryNav } from "./CategoryNav";
@@ -13,11 +14,13 @@ interface CategoryProps {
 export const CategoryPage = (props: CategoryProps) => {
  const { categoryId } = props
  return (
-  <section>
-   <CategoryNav activeId={categoryId} />
-   <div className={style.areasPostContainer}>
-    <PostAside />
-    <PostContainer />
+  <section className={style.areasSection}>
+   <div style={{ position: 'relative', zIndex: 2 }}>
+    <CategoryNav activeId={categoryId} />
+    <div className={clsx(style.areasPostContainer, 'container')}>
+     <PostAside />
+     <PostContainer />
+    </div>
    </div>
   </section>
  )
