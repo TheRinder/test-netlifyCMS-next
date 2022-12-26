@@ -24,7 +24,7 @@ body {
 $textColorLink: #424242;
 $textColorActive: #7854f7;
 
-.navBarLink{
+.navBarLink {
  font-family: "Plus Jakarta Sans";
  font-style: normal;
  font-weight: 500;
@@ -44,4 +44,28 @@ $textColorActive: #7854f7;
 
  text-align: center;
  color: #272d4e;
+}
+
+.btnGoUp {
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ margin-bottom: 189px;
+ 
+ button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  text-align: center;
+
+  color: #7854f7;
+
+  padding: 26px 107px;
+
+  background: #fff;
+
+  border: 2px solid #7854f7;
+  border-radius: 16px;
+ }
 }
