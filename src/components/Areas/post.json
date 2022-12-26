@@ -1,0 +1,71 @@
+ [
+  {
+   "type": "business",
+   "list": [
+    {
+     "slug": "incorporation",
+     "title": "Incorporation"
+    },
+    {
+     "slug": "strategy-development",
+     "title": "Strategy Development"
+    },
+    {
+     "slug": "business-model-&-plan",
+     "title": "Business Model & Plan"
+    },
+    {
+     "slug": "business-expansion",
+     "title": "Business Expansion"
+    },
+    {
+     "slug": "risk-&-crisis-managment",
+     "title": "Risk & Crisis Managment"
+    },
+    {
+     "slug": "esg",
+     "title": "ESG"
+    },
+    {
+     "slug": "digital-consulting",
+     "title": "Digital Consulting"
+    }
+   ]
+  },
+  {
+   "type": "accounting&audit",
+   "list": [
+    {
+     "slug": "test-accounting&audit",
+     "title": "accounting&audit"
+    }
+   ]
+  },
+  {
+   "type": "financial",
+   "list": [
+    {
+     "slug": "test-financial",
+     "title": "financial"
+    }
+   ]
+  },
+  {
+   "type": "legalisation",
+   "list": [
+    {
+     "slug": "test-legalisation",
+     "title": "test-legalisation"
+    }
+   ]
+  },
+  {
+   "type": "cryptocurrency",
+   "list": [
+    {
+     "slug": "test-cryptocurrency",
+     "title": "test-cryptocurrency"
+    }
+   ]
+  }
+ ]

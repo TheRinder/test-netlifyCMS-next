@@ -58,7 +58,7 @@ const ServiceCard = (props: Service) => {
 
 export const ServiceSection = () => {
  return (
-  <section className="container">
+  <section className="container" id='#service'>
    <h2 className={'sectionTitle'} style={{ position: 'relative', zIndex: 5 }}>
     Full-service legal solutions
    </h2>

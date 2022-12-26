@@ -3,7 +3,7 @@ import pattern from '../../icon/bluer-pattern.png'
 import { CircleHome, CircleLogoIcon } from '../../icon/homeIcon'
 export const WhyUsSection = () => {
  return (
-  <section className={style.whySection}>
+  <section className={style.whySection} id='#about'>
    <div className="container">
     <div style={{ position: 'relative', zIndex: 3 }}>
      <h2 className={'sectionTitle'} style={{ color: '#fff' }}>

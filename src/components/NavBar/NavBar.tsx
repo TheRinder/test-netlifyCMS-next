@@ -4,11 +4,12 @@ import { LogoIcon } from '../../icon/logo'
 import scss from './navbar.module.scss'
 import clsx from 'clsx'
 
-import { LangIcon, LocationIcon } from '../../icon/headerIcon'
+// import { LangIcon, LocationIcon } from '../../icon/headerIcon'
 import { useRouter } from 'next/router'
 
 
 interface NavLink {
+  id:string,
   title: string,
   href: string,
   isActive?: boolean,
@@ -19,7 +20,7 @@ const NavLink = (props: NavLink) => {
   const styleLink = clsx('navBarLink', props.isActive && 'active')
   return (
     <li>
-      <Link href={href}>
+      <Link href={href} scroll={true}>
         <a className={styleLink} >{title}</a>
       </Link>
     </li>
@@ -38,28 +39,34 @@ const IconAndButton = ({ text, Icon }: { text: string, Icon: React.FunctionCompo
 
 const NAV_LINKS: NavLink[] = [
   {
+    id:'areas',
     title: "Areas",
-    href: "areas"
+    href: "/areas/business"
   },
   {
+    id:'service',
     title: 'Services',
-    href: '#'
+    href: '/#service'
   },
   {
+    id:'team',
     title: 'Team',
-    href: '#'
+    href: '/#team'
   },
   {
+    id:'about',
     title: 'About Us',
-    href: '#'
+    href: '/#about'
   },
   {
+    id:'news',
     title: 'News',
-    href: 'news'
+    href: '/news'
   },
   {
+    id:'contact',
     title: 'Contact',
-    href: '#'
+    href: '/#contact'
   },
 ]
 
@@ -81,7 +88,7 @@ export const NavBar = () => {
         <nav className={scss.navBox}>
           <ul>
             {
-              NAV_LINKS.map((link, i) => <NavLink key={i} {...link} isActive={pathname.replace(/[^a-zа-яё0-9\s]/gi, '') === link.href} />)
+              NAV_LINKS.map((link, i) => <NavLink key={link.id} {...link} isActive={pathname.split('/')[1] === link.id} />)
             }
           </ul>
         </nav>

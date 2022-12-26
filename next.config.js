@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n: {
-    locales: ['ru', 'en', 'de', 'it'],
-    defaultLocale: 'en'
-  },
+  // i18n: {
+  //   locales: ['ru', 'en', 'de', 'it'],
+  //   defaultLocale: 'en'
+  // },
   reactStrictMode: true,
 
   webpack: (cfg) => {
