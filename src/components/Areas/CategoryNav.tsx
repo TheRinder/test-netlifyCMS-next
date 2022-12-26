@@ -35,7 +35,7 @@ type CategoryButtonType = {
  activeId: string,
 } & Catagory
 
-const CategoryButton = React.memo((props: CategoryButtonType) => {
+const CategoryButton = (props: CategoryButtonType) => {
  const classes = clsx(props.activeId === props.id && style.activeLink)
  return (
   <li className={classes}>
@@ -46,7 +46,7 @@ const CategoryButton = React.memo((props: CategoryButtonType) => {
    </Link>
   </li>
  )
-})
+}
 
 export const CategoryNav = ({ activeId }: { activeId?: string }) => {
  return (

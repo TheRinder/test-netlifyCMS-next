@@ -16,7 +16,7 @@ type PostAsideItemType = {
  active?: boolean,
 } & PostAsideType
 
-const PostAsideItem = React.memo((props: PostAsideItemType) => {
+const PostAsideItem = (props: PostAsideItemType) => {
  const { categoryid } = useRouter().query
  const styleActive = clsx(props.active && style.activePost) 
  return (
@@ -28,7 +28,7 @@ const PostAsideItem = React.memo((props: PostAsideItemType) => {
    </Link>
   </li>
  )
-})
+}
 
 export const PostAside = () => {
  const { categoryid, slug } = useRouter().query
