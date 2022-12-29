@@ -1,7 +1,7 @@
 ---
 title: ESG
 date: 2022-12-29T14:06:08.821Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 ## Warren Buffett
 
