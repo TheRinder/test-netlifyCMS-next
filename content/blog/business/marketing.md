@@ -1,7 +1,7 @@
 ---
 title: Marketing
 date: 2022-12-29T13:58:45.100Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 We know how to sell you this pen
 
