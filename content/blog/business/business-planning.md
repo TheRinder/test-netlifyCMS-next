@@ -1,10 +1,8 @@
 ---
-title: "Business planning "
+title: "Business planning"
 date: 2022-12-29T08:46:16.068Z
 thumbnail: img/programmirovanie_nodejs.jpg
 ---
-<!--StartFragment-->
-
 ### Good plan sounds innovative.
 
 A well-shaped business plan is the cornerstone of a successful business. It serves as a source of information to investors, financial institutions and government organisations. Having a good and professional business plan is important on every stage of business. It helps you attract investments during the early stages, as well as getting financing for extraordinary transactions during the later stages. 
@@ -16,10 +14,6 @@ Having business model & plan will help you to:
 * Know financial strategy of the project
 * Get financing from banks and government institutions
 * Attract investors and quality partners
-
-<!--EndFragment-->
-
-<!--StartFragment-->
 
 ### Key points through which we help companies
 
@@ -48,5 +42,3 @@ By the final verdict, we give the company the main advice on the introduction of
 
 
 ### Feel free to reach our specialist!
-
-<!--EndFragment-->

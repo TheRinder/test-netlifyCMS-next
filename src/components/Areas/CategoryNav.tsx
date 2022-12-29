@@ -28,8 +28,8 @@ const CATAGORY: Catagory[] = [
   title: 'Legalisation'
  },
  {
-  id: 'cryptocurrency',
-  title: 'Cryptocurrency'
+  id: 'digital',
+  title: 'Digital'
  },
 ]
 

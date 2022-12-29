@@ -13,7 +13,8 @@ const nextConfig = {
         loader: 'frontmatter-markdown-loader',
         options: { mode: ['react-component'] }
       }
-    )
+    ),
+    cfg.resolve.fallback = { fs: false };
     return cfg;
   },
 }

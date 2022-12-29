@@ -3,32 +3,32 @@
    "type": "business",
    "list": [
     {
-     "slug": "incorporation",
-     "title": "Incorporation"
+     "slug": "business-planning",
+     "title": "Business planning"
     },
     {
-     "slug": "strategy-development",
-     "title": "Strategy Development"
+     "slug": "risk-&-crisis-management",
+     "title": "Risk & crisis management "
     },
     {
-     "slug": "business-model-&-plan",
-     "title": "Business Model & Plan"
+     "slug": "expansion",
+     "title": "Expansion "
     },
     {
-     "slug": "business-expansion",
-     "title": "Business Expansion"
+     "slug": "marketing",
+     "title": "Marketing"
     },
     {
      "slug": "risk-&-crisis-managment",
      "title": "Risk & Crisis Managment"
     },
     {
-     "slug": "esg",
-     "title": "ESG"
+     "slug": "tax-advisory",
+     "title": "Tax Advisory"
     },
     {
-     "slug": "digital-consulting",
-     "title": "Digital Consulting"
+     "slug": "esg",
+     "title": "ESG"
     }
    ]
   },
@@ -60,7 +60,7 @@
    ]
   },
   {
-   "type": "cryptocurrency",
+   "type": "digital",
    "list": [
     {
      "slug": "test-cryptocurrency",

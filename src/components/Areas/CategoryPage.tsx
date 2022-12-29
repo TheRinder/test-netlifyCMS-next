@@ -6,7 +6,8 @@ import { PostContainer } from "./Post";
 import { PostAside } from "./PostAside";
 
 interface CategoryProps {
- categoryId?: string
+ categoryId?: string,
+ children?: React.ReactNode
 }
 
 
@@ -19,7 +20,9 @@ export const CategoryPage = (props: CategoryProps) => {
     <CategoryNav activeId={categoryId} />
     <div className={clsx(style.areasPostContainer, 'container')}>
      <PostAside />
-     <PostContainer />
+     <PostContainer>
+      {props.children}
+     </PostContainer>
     </div>
    </div>
   </section>

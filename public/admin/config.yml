@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  # name: test-repo
+  # name: git-gateway
+  name: test-repo
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
@@ -21,9 +21,49 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
-  - label: "Areas_business_advisory"
-    name: "Business advisory"
-    folder: "content/blog"
+  - label: "Business advisory"
+    name: "Areas_business_advisory"
+    folder: "content/blog/business"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Accounting & Audit"
+    name: "Areas_accounting_&_audit"
+    folder: "content/blog/accounting&audit"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Financial advisory"
+    name: "Areas_Financial_advisory"
+    folder: "content/blog/financial"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Legalisation"
+    name: "Areas_Legalisation"
+    folder: "content/blog/legalisation"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Digital"
+    name: "Areas_digital"
+    folder: "content/blog/digital"
     create: true
     identifier_field: name
     fields:
