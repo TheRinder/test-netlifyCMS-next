@@ -1,7 +1,7 @@
 ---
 title: "Risk & crisis management "
 date: 2022-12-29T13:51:10.031Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 **There is no better Business medicine than this.**
 
