@@ -1,7 +1,7 @@
 ---
 title: Financial modeling
 date: 2022-12-29T14:08:47.779Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 **The foundation of successful capital raising and robust financial health**
 
