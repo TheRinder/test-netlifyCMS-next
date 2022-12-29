@@ -1,7 +1,7 @@
 ---
 title: Tax Advisory
 date: 2022-12-29T14:02:54.535Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 **From challenges to results. Dealing with tax challenges in two counts.**
 
