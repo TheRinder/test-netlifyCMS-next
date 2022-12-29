@@ -125,7 +125,3 @@ Our experts will help you with the issuance of green bonds. We are able to assis
 
 
 ![](https://lh6.googleusercontent.com/SUOcFdTPM-fRbjRfV5i6Zog0HbM4S9YemjPIPWP3hz_RApxOJgnx_US5hQIuVTyGxAH_B71knKJkDoyffm_dy-zQSm7iYUe23H5Kk3wgnd682ikl4HyUX6mT22H-TTVmIfxvq6IjC6siEIvo2rWfGiWdZgnBVKBav1GJUiyvHbU6bU_WeK-CPsXdMliUYw)
-
-
-
-<!--EndFragment-->

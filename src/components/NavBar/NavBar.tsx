@@ -58,11 +58,11 @@ const NAV_LINKS: NavLink[] = [
     title: 'About Us',
     href: '/#about'
   },
-  {
-    id:'news',
-    title: 'News',
-    href: '/news'
-  },
+  // {
+  //   id:'news',
+  //   title: 'News',
+  //   href: '/news'
+  // },
   {
     id:'contact',
     title: 'Contact',

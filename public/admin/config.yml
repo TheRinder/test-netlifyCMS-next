@@ -32,8 +32,8 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Accounting & Audit"
-    name: "Areas_accounting_&_audit"
-    folder: "content/blog/accounting&audit"
+    name: "Areas_accounting_audit"
+    folder: "content/blog/accounting-audit"
     create: true
     identifier_field: name
     fields:

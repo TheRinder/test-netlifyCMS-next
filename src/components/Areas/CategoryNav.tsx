@@ -16,7 +16,7 @@ const CATAGORY: Catagory[] = [
   title: 'Business advisory'
  },
  {
-  id: 'accounting&audit',
+  id: 'accounting-audit',
   title: 'Accounting & Audit'
  },
  {

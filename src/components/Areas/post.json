@@ -7,10 +7,6 @@
      "title": "Business planning"
     },
     {
-     "slug": "risk-&-crisis-management",
-     "title": "Risk & crisis management "
-    },
-    {
      "slug": "expansion",
      "title": "Expansion "
     },
@@ -19,7 +15,7 @@
      "title": "Marketing"
     },
     {
-     "slug": "risk-&-crisis-managment",
+     "slug": "risk-crisis-management",
      "title": "Risk & Crisis Managment"
     },
     {
@@ -33,11 +29,23 @@
    ]
   },
   {
-   "type": "accounting&audit",
+   "type": "accounting-audit",
    "list": [
     {
-     "slug": "test-accounting&audit",
-     "title": "accounting&audit"
+     "slug": "accounting",
+     "title": "Accounting"
+    },
+    {
+     "slug": "internal-audit",
+     "title": "Internal Audit"
+    },
+    {
+     "slug": "investments-audit",
+     "title": "Investments Audit"
+    },
+    {
+     "slug": "transfer-pricing",
+     "title": "Transfer Pricing"
     }
    ]
   },
@@ -45,8 +53,24 @@
    "type": "financial",
    "list": [
     {
-     "slug": "test-financial",
-     "title": "financial"
+     "slug": "aml-kyc-fraud",
+     "title": "AML/KYC & Fraud"
+    },
+    {
+     "slug": "capital-raising",
+     "title": "Capital raising"
+    },
+    {
+     "slug": "financial-modeling",
+     "title": "Financial modeling"
+    },
+    {
+     "slug": "investment-advisory",
+     "title": "Investment advisory"
+    },
+    {
+     "slug": "valuation",
+     "title": "Valuation"
     }
    ]
   },
@@ -54,8 +78,24 @@
    "type": "legalisation",
    "list": [
     {
-     "slug": "test-legalisation",
-     "title": "test-legalisation"
+     "slug": "compliance-and-due-diligence",
+     "title": "Compliance and Due Diligence"
+    },
+    {
+     "slug": "corporate-commercial-law",
+     "title": "Corporate & commercial law"
+    },
+    {
+     "slug": "digital-law",
+     "title": "Digital law"
+    },
+    {
+     "slug": "investments-law",
+     "title": "Investments Law"
+    },
+    {
+     "slug": "supporting-services",
+     "title": "Supporting services"
     }
    ]
   },
@@ -63,8 +103,16 @@
    "type": "digital",
    "list": [
     {
-     "slug": "test-cryptocurrency",
-     "title": "test-cryptocurrency"
+     "slug": "crypto-blockchain",
+     "title": "Crypto & Blockchain"
+    },
+    {
+     "slug": "ensuring-stable-growth-of-digital-projects-and-tools",
+     "title": "Ensuring stable growth of digital projects and tools."
+    },
+    {
+     "slug": "web-development",
+     "title": "Web Development"
     }
    ]
   }

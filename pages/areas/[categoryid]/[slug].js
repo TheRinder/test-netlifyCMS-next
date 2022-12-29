@@ -9,7 +9,7 @@ import dynamic from 'next/dynamic'
 export default function Category() {
  const router = useRouter()
  const { categoryid, slug } = router.query
-
+ 
  const Post = dynamic(() =>
   import(`../../../content/blog/${categoryid}/${slug}.md`).then((module) => module.react)
  )
