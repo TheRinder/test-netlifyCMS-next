@@ -1,7 +1,7 @@
 ---
-title: "Business planning"
+title: Business planning
 date: 2022-12-29T08:46:16.068Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 ### Good plan sounds innovative.
 
