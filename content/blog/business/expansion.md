@@ -1,7 +1,7 @@
 ---
 title: Expansion
 date: 2022-12-29T13:55:30.197Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 **We can help you develop your product and succeed in the European markets!**
 
