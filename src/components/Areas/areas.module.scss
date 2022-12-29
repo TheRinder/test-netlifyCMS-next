@@ -142,6 +142,63 @@
 }
 
 .PostContainer {
- .PostContainerBg {
+ .PostContent {
+  width: calc(1280px - 264px);
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  p > img {
+   max-width: 100%;
+   margin: 20px 0px;
+  }
+
+  p {
+   margin-top: 16px;
+
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 28px;
+   color: #272d4e;
+  }
+
+  p strong {
+   font-weight: 600 !important;
+   color: #272d4e !important;
+  }
+
+  ul,
+  ol {
+   margin-top: 20px;
+   margin-left: 25px;
+  }
+
+  ul li::marker {
+   color: #7854f7;
+   font-size: 22px;
+  }
+
+  ul li,
+  ol li {
+   margin-top: 12px;
+
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 28px;
+   color: #272d4e;
+  }
+  h1 {
+   margin-bottom: 30px;
+  }
+  h2,
+  h3,
+  h4 {
+   margin-top: 45px;
+  }
+
+  :first-child h2,
+  &:first-child h3,
+  &:first-child h4 {
+   margin-top: 0px;
+  }
  }
 }
