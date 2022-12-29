@@ -1,7 +1,7 @@
 ---
 title: Valuation
 date: 2022-12-29T14:09:44.625Z
-thumbnail: img/programmirovanie_nodejs.jpg
+thumbnail: img/circonog.png
 ---
 The cornerstone of successful and fair transactions - Circon’s Valuation Hub. 
 
