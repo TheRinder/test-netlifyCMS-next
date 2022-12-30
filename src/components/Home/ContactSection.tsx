@@ -8,40 +8,62 @@ import {
  HomeIcon,
  TwitterIcon,
  FacebookIcon,
- InstagramIcon
+ InstagramIcon,
+ FigureForm,
+ RingIconForm
 } from '../../icon/homeIcon'
+import { Form, Field } from "react-final-form";
+
+
+const ContactForm = () => {
+
+ const onSubmitForm = (event) => {
+  console.log(event);
+ }
+
+ return (
+  <Form
+   onSubmit={onSubmitForm}
+   render={({ handleSubmit }) => (
+    <form onSubmit={handleSubmit}>
+     <div className={style.formContainer}>
+      <div className={style.formInput}>
+       <Field name='name' component={"input"} type="text" placeholder="Name" />
+      </div>
+      <div className={style.formInput}>
+       <Field name='phone' component={"input"} type="text" placeholder="Phone" />
+      </div>
+      <div className={style.formInput}>
+       <Field name='email' component={"input"} type="email" placeholder="Mail" />
+      </div>
+      <div className={style.formInput}>
+       <Field name='country' component={"input"} type="text" placeholder="Country" />
+      </div>
+      <div className={style.formInput}>
+       <Field name="comment" component={"textarea"} placeholder="Text" />
+      </div>
+      <div className={style.formBtn}>
+       <button type="submit" onSubmit={handleSubmit}>
+        Send
+       </button>
+      </div>
+     </div>
+    </form>
+   )}
+  />
+ )
+}
 
 export const ContactSection = () => {
  return (
-  <section style={{ marginBottom: 39 }}>
+  <section className={style.formSection}>
    <div className={"container"}>
     <div className={style.contactBox}>
      <h2 className={'sectionTitle'} style={{ color: '#fff', position: 'relative', zIndex: '3' }}>
       Contact Form
      </h2>
      <div className={style.flexContant}>
-      <div className={style.formContainer}>
-       <div className={style.formInput}>
-        <input type="text" placeholder="Name" />
-       </div>
-       <div className={style.formInput}>
-        <input type="text" placeholder="Phone" />
-       </div>
-       <div className={style.formInput}>
-        <input type="text" placeholder="Mail" />
-       </div>
-       <div className={style.formInput}>
-        <input type="text" placeholder="Country" />
-       </div>
-       <div className={style.formInput}>
-        <textarea name="comment" placeholder="Text" />
-       </div>
-       <div className={style.formBtn}>
-        <button type="submit">
-         Send
-        </button>
-       </div>
-      </div>
+      <ContactForm />
       <div className={style.contactInfoBox}>
        <div className={style.contactInfoLine}>
         <p>
@@ -81,8 +103,10 @@ export const ContactSection = () => {
      <span className={style.whyBg}>
       <img src={pattern.src} alt="" style={{ borderRadius: 20, opacity: 0.52 }} />
      </span>
+     <span className={style.formRingIcon}><RingIconForm /></span>
     </div>
    </div>
+   <span className={style.formFigure}><FigureForm /></span>
   </section>
  )
 }
