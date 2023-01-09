@@ -1,576 +1,703 @@
 .bannerSection {
- min-height: 807px;
- width: 100%;
- position: relative;
- display: flex;
- align-items: center;
- // overflow: hidden;
- @media screen and (max-width: 580px) {
-  min-height: 100vh;
-  align-items: flex-start;
- }
+  min-height: 807px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  // overflow: hidden;
+  @media screen and (max-width: 580px) {
+    min-height: 100vh;
+    align-items: flex-start;
+  }
 }
 
 .bannerTitle {
- font-weight: 700;
- font-size: 85px;
- line-height: 95px;
- color: #272d4e;
- max-width: 818px;
- @media screen and (max-width: 1000px) {
-  width: 100%;
-  font-size: 36px;
-  line-height: 50px;
- }
- @media screen and (max-width: 580px) {
-  margin-top: 32px;
- }
+  font-weight: 700;
+  font-size: 85px;
+  line-height: 95px;
+  color: #272d4e;
+  max-width: 818px;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  @media screen and (max-width: 580px) {
+    margin-top: 32px;
+  }
 }
 
 .bannerText {
- font-weight: 400;
- font-size: 18px;
- line-height: 28px;
- width: 511px;
- margin-top: 42px;
- color: #272d4e;
- @media screen and (max-width: 1000px) {
-  width: 100%;
-  font-size: 36px;
-  line-height: 50px;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 28px;
- }
+  width: 511px;
+  margin-top: 42px;
+  color: #272d4e;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    font-size: 36px;
+    line-height: 50px;
+    font-size: 14px;
+    line-height: 28px;
+  }
 }
 
 .bannerLink {
- background: #7854f7;
- border-radius: 16px;
+  background: #7854f7;
+  border-radius: 16px;
 
- font-weight: 500;
- font-size: 18px;
- line-height: 21px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
 
- color: #fff;
+  color: #fff;
 
- display: inline-block;
- margin-top: 28px;
- padding: 18px 78px;
+  display: inline-block;
+  margin-top: 28px;
+  padding: 18px 78px;
 
- // @media screen and (max-width: 1000px) {
- //  display: block;
- //  margin: 28px auto;
- //  text-align: center;
- // }
+  // @media screen and (max-width: 1000px) {
+  //  display: block;
+  //  margin: 28px auto;
+  //  text-align: center;
+  // }
 }
 
 .figureImg {
- position: absolute;
- bottom: -67px;
- right: 0px;
- z-index: 1;
- @media screen and (max-width: 1000px) {
-  bottom: -300px;
-  right: -200px;
- }
+  position: absolute;
+  bottom: -67px;
+  right: 0px;
+  z-index: 1;
+
+  @media screen and (max-width: 1000px) {
+    bottom: -300px;
+    right: -200px;
+  }
 }
 
 .bg {
- img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 
-  width: 100%;
-  height: 109%;
-  opacity: 0.22;
-  @media screen and (max-width: 1000px) {
-   height: 250vh;
+    width: 100%;
+    height: 109%;
+    opacity: 0.22;
+
+    @media screen and (max-width: 1000px) {
+      height: 250vh;
+    }
   }
- }
- &::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 89px;
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.9) 100%);
-  position: absolute;
-  bottom: -73px;
-  right: 0;
-  left: 0;
-  z-index: 3;
-  @media screen and (max-width: 1000px) {
-   display: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 89px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.9) 100%);
+    position: absolute;
+    bottom: -73px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
- }
 }
 
 .whyBg {
- img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 
-  width: 100%;
-  height: 100%;
-  opacity: 0.22;
- }
+    width: 100%;
+    height: 100%;
+    opacity: 0.22;
+  }
 }
 
 .circleLogo {
- position: absolute;
- z-index: 6;
- right: 0;
- bottom: -250px;
- @media screen and (max-width: 1000px) {
-  width: 160px;
-  svg {
-   max-width: 100%;
+  position: absolute;
+  z-index: 6;
+  right: 0;
+  bottom: -250px;
+
+  @media screen and (max-width: 1000px) {
+    width: 160px;
+
+    svg {
+      max-width: 100%;
+    }
   }
- }
 }
 
 .figureCircle {
- position: absolute;
- z-index: 1;
- right: 0px;
- bottom: 169px;
- @media screen and (max-width: 1000px) {
-  right: -250px;
- }
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+  bottom: 169px;
+
+  @media screen and (max-width: 1000px) {
+    right: -250px;
+  }
 }
 
 .serviceBox {
- margin: 72px auto 196px auto;
- width: 1144px;
- display: grid;
- grid-template-columns: repeat(3, 360px);
- grid-gap: 32px;
- position: relative;
- z-index: 4;
- @media screen and (max-width: 1150px) {
-  width: calc(360px * 2 + 32px);
-  grid-template-columns: repeat(2, 360px);
- }
- @media screen and (max-width: 800px) {
-  width: 100%;
-  display: block;
- }
+  margin: 72px auto 196px auto;
+  width: 1144px;
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  grid-gap: 32px;
+  position: relative;
+  z-index: 4;
+
+  @media screen and (max-width: 1150px) {
+    width: calc(360px * 2 + 32px);
+    grid-template-columns: repeat(2, 360px);
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    display: block;
+  }
 }
+
 .serviceCard {
- box-sizing: border-box;
- padding: 16px;
- background: #fff;
- border-radius: 20px;
- box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
- @media screen and (max-width: 800px) {
-  margin-bottom: 32px;
- }
- .serviceCardIcon {
-  display: flex;
-  justify-content: center;
- }
- .serviceCardTitle {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 31px;
-  text-align: center;
+  box-sizing: border-box;
+  padding: 16px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
 
-  color: #272d4e;
- }
- .serviceCardText {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  padding: 0px 12px;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 32px;
+  }
 
-  color: #94a2b3;
- }
+  .serviceCardIcon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .serviceCardTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #272d4e;
+  }
+
+  .serviceCardText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0px 12px;
+
+    color: #94a2b3;
+  }
 }
 
 .whySection {
- background: #7854f7;
- padding: 32px 0px 52px 0px;
- position: relative;
- margin-bottom: 204px;
- p {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 70px;
-  text-align: center;
+  background: #7854f7;
+  padding: 32px 0px 52px 0px;
+  position: relative;
+  margin-bottom: 204px;
 
-  color: #ffffff;
- }
- @media screen and (max-height: 1000px) {
-  z-index: 2;
   p {
-   font-size: 16px;
-   line-height: 32px;
-   margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #ffffff;
   }
- }
+
+  @media screen and (max-height: 1000px) {
+    z-index: 2;
+
+    p {
+      font-size: 16px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .CircleFigureII {
- position: absolute;
- top: -214px;
- left: 0px;
- @media screen and (max-height: 1000px) {
-  transform: translateX(-50%);
- }
+  position: absolute;
+  top: -214px;
+  left: 0px;
+
+  @media screen and (max-height: 1000px) {
+    transform: translateX(-50%);
+  }
 }
+
 .packageContainer {
- @media screen and (max-width: 1280px) {
-  width: 100% !important;
- }
- @media screen and (max-width: 530px) {
-  width: 95% !important;
- }
-}
-.packageBox {
- display: flex;
- // grid-template-columns: repeat(3, 380px);
- gap: 32px;
- width: 1204px;
- margin: 72px auto 0px auto;
- @media screen and (max-width: 1280px) {
-  width: 100%;
-  overflow: auto;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-   width: 0px;
-   height: 0px;
+  @media screen and (max-width: 1280px) {
+    width: 100% !important;
   }
-  & > div:first-child {
-   margin-left: 24px;
-  }
-  & > div:last-child {
-   margin-right: 24px;
-  }
- }
- @media screen and (max-width: 530px) {
-  display: block;
-  & > div:first-child {
-   margin-left: 0px;
-  }
-  & > div:last-child {
-   margin-right: 0px;
-  }
- }
- .packageCard {
-  width: 380px;
-  background: #ffffff;
-  border: 1px solid #eaecf0;
-  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding: 32px;
+
   @media screen and (max-width: 530px) {
-   margin: 0px auto 24px auto;
-   width: 360px;
+    width: 95% !important;
   }
-  .packageCardIcon {
-   display: flex;
-   justify-content: center;
-   width: 100%;
-  }
-  .packageCardLabel {
-   margin-top: 20px;
-   margin-bottom: 8px;
+}
 
-   font-weight: 600;
-   font-size: 20px;
-   line-height: 30px;
-   text-align: center;
+.packageBox {
+  display: flex;
+  // grid-template-columns: repeat(3, 380px);
+  gap: 32px;
+  width: 1204px;
+  margin: 72px auto 0px auto;
 
-   color: #7854f7;
-  }
-  .packageCardPrice {
-   font-weight: 600;
-   font-size: 48px;
-   line-height: 60px;
-   text-align: center;
-   letter-spacing: -0.02em;
-   color: #101828;
-   span {
-    margin-left: 3px;
-    color: #667085;
-   }
-  }
-  .packageCardSub {
-   margin-top: 8px;
-
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 24px;
-   text-align: center;
-   color: #667085;
-  }
-  .packageCardAdvantages {
-   margin-top: 32px;
-   ul {
-    list-style: none;
-    li {
-     display: flex;
-     align-items: center;
-     margin-bottom: 16px;
-
-     font-weight: 400;
-     font-size: 16px;
-     line-height: 24px;
-     color: #667085;
-     span {
-      margin-right: 12px;
-      margin-bottom: -5px;
-     }
-    }
-   }
-  }
-  .packageCardBtnBox {
-   margin-top: 64px;
-   width: 100%;
-   button {
+  @media screen and (max-width: 1280px) {
     width: 100%;
-    background: #7854f7;
-    border: 1px solid #7854f7;
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    border-radius: 8px;
-    padding: 12px 0px;
+    overflow: auto;
+    scrollbar-width: none;
 
-    color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-   }
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    &>div:first-child {
+      margin-left: 24px;
+    }
+
+    &>div:last-child {
+      margin-right: 24px;
+    }
   }
- }
+
+  @media screen and (max-width: 530px) {
+    display: block;
+
+    &>div:first-child {
+      margin-left: 0px;
+    }
+
+    &>div:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  .packageCard {
+    width: 380px;
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 32px;
+
+    @media screen and (max-width: 530px) {
+      margin: 0px auto 24px auto;
+      width: 360px;
+    }
+
+    .packageCardIcon {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .packageCardLabel {
+      margin-top: 20px;
+      margin-bottom: 8px;
+
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+
+      color: #7854f7;
+    }
+
+    .packageCardPrice {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #101828;
+
+      span {
+        margin-left: 3px;
+        color: #667085;
+      }
+    }
+
+    .packageCardSub {
+      margin-top: 8px;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #667085;
+    }
+
+    .packageCardAdvantages {
+      margin-top: 32px;
+
+      ul {
+        list-style: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #667085;
+
+          span {
+            margin-right: 12px;
+            margin-bottom: -5px;
+          }
+        }
+      }
+    }
+
+    .packageCardBtnBox {
+      margin-top: 64px;
+      width: 100%;
+
+      button {
+        width: 100%;
+        background: #7854f7;
+        border: 1px solid #7854f7;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+        padding: 12px 0px;
+
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
 }
 
 .partnersBox {
- margin-top: 100px;
- margin-bottom: 137px;
+  margin-top: 100px;
+  margin-bottom: 137px;
 }
-.partnersGrid {
- margin-top: 80px;
- display: grid;
- grid-template-columns: repeat(3, 33.33%);
- @media screen and (max-width: 1060px) {
-  display: flex;
-  flex-direction: column;
- }
- .partnerItem {
-  width: 100%;
-  height: 94px;
-  display: flex;
-  align-items: center;
+
+.partnerTitle {
+  text-align: right;
+
   @media screen and (max-width: 1060px) {
-   display: flex;
-   justify-content: center !important; 
+    text-align: center;
   }
-  img {
-   max-width: 100%;
-   max-height: 100%;
-   object-fit: cover;
-  }
- }
- .partnerItem:nth-child(2) {
-  justify-content: center;
- }
- .partnerItem:nth-child(3) {
-  justify-content: end;
- }
 }
 
-.testimonialBox {
- margin-bottom: 152px;
- .testimonialSubText {
-  margin: 56px 0px 72px 0px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+.partnersGrid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
 
-  color: #94a2b3;
- }
- .commentBox {
-  display: flex;
-  gap: 32px;
-  width: 1147px;
-  margin: 0px auto;
-  .testimonialCard {
-   background: #ffffff;
-   box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
-   border-radius: 20px;
-   padding: 24px;
-   box-sizing: border-box;
-   .testimonialCardAuthor {
+  @media screen and (max-width: 1060px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partnerItem {
+    width: 100%;
+    height: 165px;
     display: flex;
     align-items: center;
 
-    .testimonialAuthorImgBox {
-     width: 44px;
-     height: 44px;
-     margin-right: 28px;
-     img {
+    @media screen and (max-width: 1060px) {
+      display: flex;
+      justify-content: center !important;
+      margin-bottom: 54px;
+    }
+
+    img {
       max-width: 100%;
       max-height: 100%;
-      border-radius: 50px;
-     }
+      object-fit: cover;
     }
-    .testimonialAuthorImg {
-     border-radius: 44px;
-     max-width: 44px;
-     max-height: 44px;
-    }
-    .testimonialAuthorName {
-     font-weight: 700;
-     font-size: 18px;
-     line-height: 22px;
-
-     color: #222849;
-    }
-   }
-   .testimonialCardText {
-    margin-top: 16px;
-    p {
-     font-weight: 400;
-     font-size: 12px;
-     line-height: 22px;
-     color: #94a2b3;
-    }
-   }
   }
- }
+
+  .partnerItem:nth-child(2) {
+    justify-content: center;
+  }
+
+  .partnerItem:nth-child(3) {
+    justify-content: end;
+  }
+}
+
+.testimonialBox {
+  margin-bottom: 152px;
+
+  .testimonialTitle {
+    text-align: left;
+
+    @media screen and (max-width: 1060px) {
+      text-align: center;
+    }
+  }
+
+  .testimonialSubText {
+    margin: 56px 0px 72px 0px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #94a2b3;
+
+    @media screen and (max-width: 1060px) {
+      text-align: center;
+    }
+  }
+
+  .commentBox {
+    display: flex;
+    gap: 32px;
+    width: 1147px;
+    margin: 0px auto;
+
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+      display: block;
+    }
+
+    .testimonialCard {
+      background: #ffffff;
+      box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+      border-radius: 20px;
+      padding: 24px;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 1280px) {
+        margin-bottom: 24px;
+      }
+
+      .testimonialCardAuthor {
+        display: flex;
+        align-items: center;
+
+        .testimonialAuthorImgBox {
+          width: 44px;
+          height: 44px;
+          margin-right: 28px;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50px;
+          }
+        }
+
+        .testimonialAuthorImg {
+          border-radius: 44px;
+          max-width: 44px;
+          max-height: 44px;
+        }
+
+        .testimonialAuthorName {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+
+          color: #222849;
+        }
+      }
+
+      .testimonialCardText {
+        margin-top: 16px;
+
+        p {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 22px;
+          color: #94a2b3;
+        }
+      }
+    }
+  }
 }
 
 .contactBox {
- width: 100%;
- padding: 32px 92px 43px 88px;
- box-sizing: border-box;
- position: relative;
- z-index: 2;
-
- background: #7854f7;
- box-shadow: 0px 0px 44px rgba(81, 49, 194, 0.16);
- border-radius: 20px;
-}
-.flexContant {
- margin-top: 56px;
- display: flex;
- position: relative;
- z-index: 3;
- .formContainer {
-  width: 400px;
-  .formInput {
-   width: 100%;
-   margin-bottom: 16.4px;
-   input,
-   textarea {
-    padding: 12px;
-    width: 100%;
-    box-sizing: border-box;
-
-    background: rgba(255, 255, 255, 0.04);
-
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    /* white */
-    color: #ffffff;
-    &::placeholder {
-     opacity: 1;
-     font-weight: 400;
-     font-size: 16px;
-     line-height: 19px;
-     /* white */
-     color: #ffffff;
-    }
-   }
-   textarea {
-    resize: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-     width: 0px;
-    }
-    &::-webkit-scrollbar-thumb {
-     width: 0px;
-    }
-   }
-  }
-  .formBtn {
-   margin-top: 32.5px;
-   button {
-    padding: 12px 0px;
-    width: 100%;
-
-    border: 1px solid #7854f7;
-    /* Shadow/xs */
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    border-radius: 8px;
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    /* white */
-    color: #7854f7;
-   }
-  }
- }
-}
-.contactInfoBox {
- width: 324px;
- margin-left: auto;
- .contactInfoLine {
   width: 100%;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  p + p {
-   text-align: right;
-   font-weight: 400;
-   font-size: 18px;
-   line-height: 28px;
+  padding: 32px 92px 43px 88px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 
-   /* white */
-   color: #ffffff;
+  background: #7854f7;
+  box-shadow: 0px 0px 44px rgba(81, 49, 194, 0.16);
+  border-radius: 20px;
+
+  @media screen and (max-width:650px) {
+    padding: 16px;
   }
- }
+}
+
+.flexContant {
+  margin-top: 56px;
+  display: flex;
+  position: relative;
+  z-index: 3;
+
+  @media screen and (max-width:990px) {
+    display: block;
+  }
+
+  .formContainer {
+    width: 400px;
+
+    @media screen and (max-width:990px) {
+      width: 100%;
+    }
+
+    .formInput {
+      width: 100%;
+      margin-bottom: 16.4px;
+
+      input,
+      textarea {
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+
+        background: rgba(255, 255, 255, 0.04);
+
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        /* white */
+        color: #ffffff;
+
+        &::placeholder {
+          opacity: 1;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          /* white */
+          color: #ffffff;
+        }
+      }
+
+      textarea {
+        resize: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          width: 0px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 0px;
+        }
+      }
+    }
+
+    .formBtn {
+      margin-top: 32.5px;
+
+      button {
+        padding: 12px 0px;
+        width: 100%;
+
+        border: 1px solid #7854f7;
+        /* Shadow/xs */
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* white */
+        color: #7854f7;
+      }
+    }
+  }
+}
+
+.contactInfoBox {
+  width: 324px;
+  margin-left: auto;
+
+  @media screen and (max-width:990px) {
+    margin-top: 24px;
+  }
+  @media screen and (max-width:650px) {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .contactInfoLine {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    p+p {
+      text-align: right;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+
+      /* white */
+      color: #ffffff;
+    }
+  }
 }
 
 .contactSocialLine {
- display: flex;
- justify-content: flex-end;
- ul {
-  list-style: none;
   display: flex;
-  li {
-   margin-left: 16px;
+  justify-content: flex-end;
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-left: 16px;
+    }
   }
- }
 }
 
 .formSection {
- position: relative;
- margin-bottom: 39px;
- .formFigure {
-  position: absolute;
-  left: 0px;
-  bottom: -70px;
- }
- .formRingIcon {
-  position: absolute;
-  top: -100px;
-  left: -50px;
- }
+  position: relative;
+  margin-bottom: 39px;
+
+  .formFigure {
+    position: absolute;
+    left: 0px;
+    bottom: -70px;
+  }
+
+  .formRingIcon {
+    position: absolute;
+    top: -100px;
+    left: -50px;
+  }
 }

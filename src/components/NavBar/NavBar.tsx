@@ -78,7 +78,7 @@ export const NavBar = () => {
   const [country, setCountry] = React.useState<string>("")
 
   React.useEffect(() => {
-    if(country.length === 0){
+    if (country.length === 0) {
       VisitorAPI(
         "SDSL2GEyDIbjsiv2nfCO",
         data => {
@@ -106,7 +106,10 @@ export const NavBar = () => {
           </ul>
         </nav>
         <div className={scss.locationBox}>
-          <IconAndButton text={country} Icon={LocationIcon} />
+          {
+            country.length !== 0 &&
+            <IconAndButton text={country} Icon={LocationIcon} />
+          }
           {/* <IconAndButton text={locale} Icon={LangIcon} /> */}
         </div>
       </div>

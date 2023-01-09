@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './home.module.scss'
 import logoPlaceholder from '../../icon/LOGO.png'
+import clsx from 'clsx'
 
 interface Partner {
  name: string,
@@ -9,7 +10,7 @@ interface Partner {
 const PARTNETS: Partner[] = [
  {
   name: 'Placeholder',
-  logo: ''
+  logo: './image/social.png'
  },
  {
   name: 'Placeholder',
@@ -32,10 +33,11 @@ const PartnerCard = (props: Partner) => {
 }
 
 export const PartnersSection = () => {
+  const classes = clsx('sectionTitle', style.partnerTitle)
  return (
   <section className={style.partnersBox}>
    <div className="container">
-    <h2 className={'sectionTitle'} style={{ textAlign: 'right' }}>
+    <h2 className={classes}>
      Our Partners
     </h2>
     <div className={style.partnersGrid}>
