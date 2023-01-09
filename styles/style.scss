@@ -19,6 +19,9 @@ body {
 .container {
  width: 1280px;
  margin: 0px auto;
+ @media screen and (max-width: 1300px) {
+  width: 95%;
+ }
 }
 
 $textColorLink: #424242;
@@ -44,6 +47,10 @@ $textColorActive: #7854f7;
 
  text-align: center;
  color: #272d4e;
+ @media screen and (max-width: 1000px) {
+  font-size: 36px;
+  line-height: 50px;
+ }
 }
 
 .btnGoUp {
@@ -51,7 +58,7 @@ $textColorActive: #7854f7;
  justify-content: center;
  width: 100%;
  margin-bottom: 189px;
- 
+
  button {
   font-weight: 500;
   font-size: 18px;

@@ -5,6 +5,10 @@
  display: flex;
  align-items: center;
  // overflow: hidden;
+ @media screen and (max-width: 580px) {
+  min-height: 100vh;
+  align-items: flex-start;
+ }
 }
 
 .bannerTitle {
@@ -13,6 +17,14 @@
  line-height: 95px;
  color: #272d4e;
  max-width: 818px;
+ @media screen and (max-width: 1000px) {
+  width: 100%;
+  font-size: 36px;
+  line-height: 50px;
+ }
+ @media screen and (max-width: 580px) {
+  margin-top: 32px;
+ }
 }
 
 .bannerText {
@@ -20,9 +32,15 @@
  font-size: 18px;
  line-height: 28px;
  width: 511px;
-
  margin-top: 42px;
- color: #94a2b3;
+ color: #272d4e;
+ @media screen and (max-width: 1000px) {
+  width: 100%;
+  font-size: 36px;
+  line-height: 50px;
+  font-size: 14px;
+  line-height: 28px;
+ }
 }
 
 .bannerLink {
@@ -38,6 +56,12 @@
  display: inline-block;
  margin-top: 28px;
  padding: 18px 78px;
+
+ // @media screen and (max-width: 1000px) {
+ //  display: block;
+ //  margin: 28px auto;
+ //  text-align: center;
+ // }
 }
 
 .figureImg {
@@ -45,6 +69,10 @@
  bottom: -67px;
  right: 0px;
  z-index: 1;
+ @media screen and (max-width: 1000px) {
+  bottom: -300px;
+  right: -200px;
+ }
 }
 
 .bg {
@@ -59,6 +87,9 @@
   width: 100%;
   height: 109%;
   opacity: 0.22;
+  @media screen and (max-width: 1000px) {
+   height: 250vh;
+  }
  }
  &::after {
   content: "";
@@ -71,6 +102,9 @@
   right: 0;
   left: 0;
   z-index: 3;
+  @media screen and (max-width: 1000px) {
+   display: none;
+  }
  }
 }
 
@@ -94,9 +128,11 @@
  z-index: 6;
  right: 0;
  bottom: -250px;
- // mix-blend-mode: overlay;
- svg path {
-  // fill: #7854f7;
+ @media screen and (max-width: 1000px) {
+  width: 160px;
+  svg {
+   max-width: 100%;
+  }
  }
 }
 
@@ -105,6 +141,9 @@
  z-index: 1;
  right: 0px;
  bottom: 169px;
+ @media screen and (max-width: 1000px) {
+  right: -250px;
+ }
 }
 
 .serviceBox {
@@ -115,6 +154,14 @@
  grid-gap: 32px;
  position: relative;
  z-index: 4;
+ @media screen and (max-width: 1150px) {
+  width: calc(360px * 2 + 32px);
+  grid-template-columns: repeat(2, 360px);
+ }
+ @media screen and (max-width: 800px) {
+  width: 100%;
+  display: block;
+ }
 }
 .serviceCard {
  box-sizing: border-box;
@@ -122,6 +169,9 @@
  background: #fff;
  border-radius: 20px;
  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+ @media screen and (max-width: 800px) {
+  margin-bottom: 32px;
+ }
  .serviceCardIcon {
   display: flex;
   justify-content: center;
@@ -158,12 +208,31 @@
 
   color: #ffffff;
  }
+ @media screen and (max-height: 1000px) {
+  z-index: 2;
+  p {
+   font-size: 16px;
+   line-height: 32px;
+   margin-bottom: 24px;
+  }
+ }
 }
 
 .CircleFigureII {
  position: absolute;
  top: -214px;
  left: 0px;
+ @media screen and (max-height: 1000px) {
+  transform: translateX(-50%);
+ }
+}
+.packageContainer {
+ @media screen and (max-width: 1280px) {
+  width: 100% !important;
+ }
+ @media screen and (max-width: 530px) {
+  width: 95% !important;
+ }
 }
 .packageBox {
  display: flex;
@@ -171,6 +240,30 @@
  gap: 32px;
  width: 1204px;
  margin: 72px auto 0px auto;
+ @media screen and (max-width: 1280px) {
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+   width: 0px;
+   height: 0px;
+  }
+  & > div:first-child {
+   margin-left: 24px;
+  }
+  & > div:last-child {
+   margin-right: 24px;
+  }
+ }
+ @media screen and (max-width: 530px) {
+  display: block;
+  & > div:first-child {
+   margin-left: 0px;
+  }
+  & > div:last-child {
+   margin-right: 0px;
+  }
+ }
  .packageCard {
   width: 380px;
   background: #ffffff;
@@ -179,6 +272,10 @@
   border-radius: 16px;
   box-sizing: border-box;
   padding: 32px;
+  @media screen and (max-width: 530px) {
+   margin: 0px auto 24px auto;
+   width: 360px;
+  }
   .packageCardIcon {
    display: flex;
    justify-content: center;
@@ -264,11 +361,19 @@
  margin-top: 80px;
  display: grid;
  grid-template-columns: repeat(3, 33.33%);
+ @media screen and (max-width: 1060px) {
+  display: flex;
+  flex-direction: column;
+ }
  .partnerItem {
   width: 100%;
   height: 94px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 1060px) {
+   display: flex;
+   justify-content: center !important; 
+  }
   img {
    max-width: 100%;
    max-height: 100%;

@@ -11,6 +11,9 @@ $textColorLang: #616161;
 }
 
 .navBox {
+ @media screen and (max-width: 580px) {
+  display: none;
+ }
  ul {
   list-style: none;
   display: flex;

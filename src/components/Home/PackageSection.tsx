@@ -7,6 +7,7 @@ import {
  AdvancedIcon,
  AdvancedProIcon
 } from '../../icon/PackagesIcon'
+import clsx from 'clsx'
 
 
 interface Package {
@@ -71,31 +72,36 @@ const PackageCard = (props: Package) => {
   icon } = props
  return (
   <div className={style.packageCard}>
-   <div className={style.packageCardIcon}>
-    {icon}
+   <div className={style.mobilePackageTitle}>
+    <div className={style.packageCardIcon}>
+     {icon}
+    </div>
+    <p className={style.packageCardLabel}>{label}</p>
+    <p className={style.packageCardPrice}>{price} <span>EUR</span></p>
+    <p className={style.packageCardSub}>{subText}</p>
    </div>
-   <p className={style.packageCardLabel}>{label}</p>
-   <p className={style.packageCardPrice}>{price} <span>EUR</span></p>
-   <p className={style.packageCardSub}>{subText}</p>
-   <div className={style.packageCardAdvantages}>
-    <ul>
-     {
-      advantages.map((item, index) => <li key={index}><span><CheckIcon /></span>{item}</li>)
-     }
-    </ul>
-   </div>
-   <div className={style.packageCardBtnBox}>
-    <button>
-     Get started
-    </button>
+   <div>
+    <div className={style.packageCardAdvantages}>
+     <ul>
+      {
+       advantages.map((item, index) => <li key={index}><span><CheckIcon /></span>{item}</li>)
+      }
+     </ul>
+    </div>
+    <div className={style.packageCardBtnBox}>
+     <button>
+      Get started
+     </button>
+    </div>
    </div>
   </div>
  )
 }
 
 export const PackageSection = () => {
+ const classes = clsx("container", style.packageContainer)
  return (
-  <section className="container">
+  <section className={classes}>
    <h2 className={'sectionTitle'}>
     Packages
    </h2>
