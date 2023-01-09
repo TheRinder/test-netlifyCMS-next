@@ -3,13 +3,14 @@ import Link from "next/link"
 import { LogoIcon } from '../../icon/logo'
 import scss from './navbar.module.scss'
 import clsx from 'clsx'
+const VisitorAPI = require("visitorapi");
 
-// import { LangIcon, LocationIcon } from '../../icon/headerIcon'
+import { LangIcon, LocationIcon } from '../../icon/headerIcon'
 import { useRouter } from 'next/router'
 
 
 interface NavLink {
-  id:string,
+  id: string,
   title: string,
   href: string,
   isActive?: boolean,
@@ -39,22 +40,22 @@ const IconAndButton = ({ text, Icon }: { text: string, Icon: React.FunctionCompo
 
 const NAV_LINKS: NavLink[] = [
   {
-    id:'areas',
+    id: 'areas',
     title: "Areas",
     href: "/areas/business"
   },
   {
-    id:'service',
+    id: 'service',
     title: 'Services',
     href: '/#service'
   },
   {
-    id:'team',
+    id: 'team',
     title: 'Team',
     href: '/#team'
   },
   {
-    id:'about',
+    id: 'about',
     title: 'About Us',
     href: '/#about'
   },
@@ -64,7 +65,7 @@ const NAV_LINKS: NavLink[] = [
   //   href: '/news'
   // },
   {
-    id:'contact',
+    id: 'contact',
     title: 'Contact',
     href: '/#contact'
   },
@@ -74,6 +75,18 @@ const NAV_LINKS: NavLink[] = [
 export const NavBar = () => {
   const styleComponent = clsx('container', scss.headerContainer)
   const { locale, pathname } = useRouter()
+  const [country, setCountry] = React.useState<string>("")
+
+  React.useEffect(() => {
+    if(country.length === 0){
+      VisitorAPI(
+        "SDSL2GEyDIbjsiv2nfCO",
+        data => {
+          setCountry(data.countryName);
+        }
+      );
+    }
+  }, [])
 
   return (
     <header className={scss.header}>
@@ -93,8 +106,8 @@ export const NavBar = () => {
           </ul>
         </nav>
         <div className={scss.locationBox}>
-          {/* <IconAndButton text="Estonia" Icon={LocationIcon} />
-          <IconAndButton text={locale} Icon={LangIcon} /> */}
+          <IconAndButton text={country} Icon={LocationIcon} />
+          {/* <IconAndButton text={locale} Icon={LangIcon} /> */}
         </div>
       </div>
     </header>
