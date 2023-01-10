@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import style from './home.module.scss'
 
-interface Author {
+export interface Author {
   name: string,
   picture: string,
 }

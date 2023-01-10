@@ -44,11 +44,11 @@ const NAV_LINKS: NavLink[] = [
     title: 'Services',
     href: '/#service'
   },
-  {
-    id: 'areas',
-    title: "Areas",
-    href: "/areas/"
-  },
+  // {
+  //   id: 'areas',
+  //   title: "Areas",
+  //   href: "/areas/"
+  // },
   {
     id: 'team',
     title: 'Team',
@@ -59,11 +59,11 @@ const NAV_LINKS: NavLink[] = [
     title: 'About Us',
     href: '/#about'
   },
-  // {
-  //   id:'news',
-  //   title: 'News',
-  //   href: '/news'
-  // },
+  {
+    id: 'news',
+    title: 'News',
+    href: '/news'
+  },
   {
     id: 'contact',
     title: 'Contact',

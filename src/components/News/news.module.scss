@@ -2,7 +2,6 @@
  background: #7854f7;
  padding: 32px 0px 52px 0px;
  position: relative;
- margin-bottom: 204px;
  p {
   width: 500px;
   text-align: center;
@@ -30,9 +29,121 @@
   opacity: 0.52;
  }
 }
+.newsContainer {
+ width: 980px;
+ margin: 54px auto 149px auto;
+ @media screen and (max-width: 1008px) {
+  width: 95%;
+ }
+}
 
-.ourNewsText{
+.ourNewsText {
  margin-top: 32px;
  display: flex;
  justify-content: center;
+}
+.newsCard {
+ margin-bottom: 32px;
+ padding-top: 24px;
+ position: relative;
+ width: 100%;
+ display: flex;
+ @media screen and (max-width: 750px) {
+  flex-direction: column;
+ }
+
+ &::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #7854f7;
+  opacity: 0.24;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+ }
+ .newsCardImage {
+  border-radius: 8px;
+  min-width: 305px;
+  height: 210px;
+  @media screen and (max-width: 750px) {
+   order: 1;
+  }
+  img {
+   width: 100%;
+   height: 100%;
+   border-radius: inherit;
+   object-fit: cover;
+  }
+ }
+ .newsTypography {
+  box-sizing: border-box;
+  margin-right: 65px;
+  @media screen and (max-width: 750px) {
+   order: 2;
+   margin-right: 0px;
+   margin-top: 17px;
+  }
+  .newsCardHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   .cardTag {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #272d4e;
+
+    padding: 8px 12px;
+    background: rgba(120, 84, 247, 0.16);
+    border-radius: 6px;
+   }
+   .cardDate {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #272d4e;
+   }
+  }
+  .newsTitle {
+   margin: 26px 0px 12px 0px;
+   font-weight: 700;
+   font-size: 28px;
+   line-height: 130%;
+   color: #272d4e;
+  }
+  .newsSubText {
+   margin-bottom: 24px;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 150%;
+   color: #272d4e;
+  }
+ }
+}
+.newsAuthor {
+ display: flex;
+ align-items: center;
+ .newsAuthorBoxImage {
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  img {
+   width: 100%;
+   height: 100%;
+   border-radius: inherit;
+   object-fit: cover;
+  }
+ }
+ .newsAuthorName {
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+
+  color: #94a2b3;
+ }
 }
