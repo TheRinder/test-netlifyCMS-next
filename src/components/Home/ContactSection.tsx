@@ -22,7 +22,7 @@ const ContactForm = () => {
   fetch("/", {
    method: "POST",
    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-   body: JSON.stringify(event),
+   body: event,
   })
    .then(() => console.log("Form successfully submitted"))
    .catch((error) => alert(error));
