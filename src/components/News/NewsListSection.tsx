@@ -8,7 +8,10 @@ export const NewsListSection = () => {
   <section className={style.newsContainer}>
    {
     new Array(5).fill('').map((_, index) => {
-     return <NewsCard key={index} />
+     return <NewsCard
+      key={index}
+      slug={`${index}`}
+     />
     })
    }
   </section>
