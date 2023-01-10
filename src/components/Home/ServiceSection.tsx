@@ -5,38 +5,39 @@ import style from './home.module.scss'
 interface Service {
  id: number,
  title: string,
- infoText: string
+ infoText: string,
+ link?: string
 }
 
 const SERVICES: Service[] = [
  {
   id: 0,
-  title: 'Arbitration and Mediation',
+  title: 'Business advisory',
   infoText: `Briefly talk about your firm's services here.`
  },
  {
   id: 1,
-  title: 'Criminal Defense',
+  title: 'Accounting & audit',
   infoText: `Briefly talk about your firm's services here.`
  },
  {
   id: 2,
-  title: 'Family Law',
+  title: 'Financial advisory',
   infoText: `Briefly talk about your firm's services here.`
  },
  {
   id: 3,
-  title: 'Immigration',
+  title: 'Legal',
   infoText: `Briefly talk about your firm's services here.`
  },
  {
   id: 4,
-  title: 'Personal Injury',
+  title: 'Digital',
   infoText: `Briefly talk about your firm's services here.`
  },
  {
   id: 5,
-  title: 'Tax and Estate Planning',
+  title: 'Crypto',
   infoText: `Briefly talk about your firm's services here.`
  },
 ]

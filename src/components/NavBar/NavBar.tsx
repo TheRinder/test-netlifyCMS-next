@@ -5,7 +5,7 @@ import scss from './navbar.module.scss'
 import clsx from 'clsx'
 const VisitorAPI = require("visitorapi");
 
-import { LangIcon, LocationIcon } from '../../icon/headerIcon'
+import { LocationIcon } from '../../icon/headerIcon'
 import { useRouter } from 'next/router'
 
 
@@ -40,14 +40,14 @@ const IconAndButton = ({ text, Icon }: { text: string, Icon: React.FunctionCompo
 
 const NAV_LINKS: NavLink[] = [
   {
-    id: 'areas',
-    title: "Areas",
-    href: "/areas/business"
-  },
-  {
     id: 'service',
     title: 'Services',
     href: '/#service'
+  },
+  {
+    id: 'areas',
+    title: "Areas",
+    href: "/areas/"
   },
   {
     id: 'team',

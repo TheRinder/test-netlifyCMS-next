@@ -13,19 +13,27 @@ import {
  RingIconForm
 } from '../../icon/homeIcon'
 import { Form, Field } from "react-final-form";
+import Link from "next/link";
 
 
 const ContactForm = () => {
 
  const onSubmitForm = (event) => {
-  console.log(event);
+  fetch("/", {
+   method: "POST",
+   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+   body: JSON.stringify(event),
+  })
+   .then(() => console.log("Form successfully submitted"))
+   .catch((error) => alert(error));
+  // console.log(event);
  }
 
  return (
   <Form
    onSubmit={onSubmitForm}
    render={({ handleSubmit }) => (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-netlify="true">
      <div className={style.formContainer}>
       <div className={style.formInput}>
        <Field name='name' component={"input"} type="text" placeholder="Name" />
@@ -70,7 +78,13 @@ export const ContactSection = () => {
          <CallIcon />
         </p>
         <p>
-         +372 58164161  <br />
+         <Link href={"tel:+37258164161"}>
+          <a >
+           +372 58164161
+          </a>
+         </Link>
+
+         <br />
          whatsapp / viber / telegram
         </p>
        </div>
@@ -88,7 +102,11 @@ export const ContactSection = () => {
          <SendIcon />
         </p>
         <p>
-         circons@circonsgroup.com
+         <Link href={"mailto:circons@circonsgroup.com"}>
+          <a >
+           circons@circonsgroup.com
+          </a>
+         </Link>
         </p>
        </div>
        <div className={style.contactSocialLine}>
@@ -103,10 +121,14 @@ export const ContactSection = () => {
      <span className={style.whyBg}>
       <img src={pattern.src} alt="" style={{ borderRadius: 20, opacity: 0.52 }} />
      </span>
-     <span className={style.formRingIcon}><RingIconForm /></span>
+     <span className={style.formRingIcon}>
+      <RingIconForm />
+     </span>
     </div>
    </div>
-   <span className={style.formFigure}><FigureForm /></span>
+   <span className={style.formFigure}>
+    <FigureForm />
+   </span>
   </section>
  )
 }
