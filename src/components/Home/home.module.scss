@@ -60,6 +60,12 @@
  display: inline-block;
  margin-top: 28px;
  padding: 18px 78px;
+ transition: all 0.3s ease-in-out;
+
+ &:hover {
+  background: #8e6fff;
+  transition: all 0.3s ease-in-out;
+ }
 
  @media screen and (max-width: 450px) {
   padding: 18px 38px;
@@ -384,6 +390,7 @@
    width: 100%;
 
    button {
+    cursor: pointer;
     width: 100%;
     background: #7854f7;
     border: 1px solid #7854f7;
@@ -395,6 +402,12 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+     background: #8e6fff;
+     transition: all 0.3s ease-in-out;
+    }
    }
   }
  }
@@ -428,6 +441,7 @@
   height: 165px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 1060px) {
    display: flex;
@@ -690,6 +704,27 @@
 
   li {
    margin-left: 16px;
+  }
+ }
+ ul li a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  svg path {
+   transition: all 0.2s ease-in-out;
+  }
+  svg circle {
+   transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+   svg path {
+    fill: #7854f7;
+    transition: all 0.2s ease-in-out;
+   }
+   svg circle {
+    fill: #ffffff;
+    transition: all 0.3s ease-in-out;
+   }
   }
  }
 }

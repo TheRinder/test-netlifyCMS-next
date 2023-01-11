@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NewsCard } from './NewsCard'
-import { getAllPostIds } from '../../../lib/news'
 import style from './news.module.scss';
 
-export const NewsListSection = ({ postData }) => {
- console.log(postData);
+export const NewsListSection = () => {
 
  return (
   <section className={style.newsContainer}>
@@ -28,11 +26,11 @@ export const NewsListSection = ({ postData }) => {
 //  };
 // }
 
-export async function getStaticProps() {
- const postData = getAllPostIds();
- return {
-  props: {
-   postData,
-  },
- };
-}
+// export async function getStaticProps() {
+//  const postData = getAllPostIds();
+//  return {
+//   props: {
+//    postData,
+//   },
+//  };
+// }

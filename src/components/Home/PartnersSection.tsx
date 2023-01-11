@@ -10,15 +10,11 @@ interface Partner {
 const PARTNETS: Partner[] = [
  {
   name: 'Placeholder',
-  logo: './image/social.png'
+  logo: './image/kandkLogo.png'
  },
  {
   name: 'Placeholder',
-  logo: ''
- },
- {
-  name: 'Placeholder',
-  logo: ''
+  logo: './image/logo.png'
  }
 ]
 
