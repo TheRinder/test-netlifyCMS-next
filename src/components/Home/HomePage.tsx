@@ -8,6 +8,12 @@ import { TestimonialsSection } from "./TestimonialsSection";
 import { WhyUsSection } from "./WhyUsSection";
 
 export default function HomePage() {
+  const ScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
   return (
     <>
       <BannerSection />
@@ -18,7 +24,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <ContactSection />
       <div className='btnGoUp'>
-        <button>
+        <button onClick={() => ScrollToTop()}>
           Go Up!
         </button>
       </div>

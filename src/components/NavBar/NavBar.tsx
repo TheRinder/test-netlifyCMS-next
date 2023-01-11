@@ -92,7 +92,7 @@ export const NavBar = () => {
     <header className={scss.header}>
       <div className={styleComponent}>
         <div>
-          <Link href={'/'}>
+          <Link href={'/'} scroll={true}>
             <a>
               <LogoIcon />
             </a>

@@ -5,6 +5,10 @@
  outline: none;
 }
 
+html {
+ scroll-behavior: smooth;
+}
+
 a {
  text-decoration: none;
  outline: none;
@@ -31,8 +35,8 @@ $textColorActive: #7854f7;
  font-family: "Plus Jakarta Sans";
  font-style: normal;
  font-weight: 500;
- font-size: 18px;
- line-height: 21px;
+ font-size: 16px;
+ line-height: 20px;
  color: $textColorLink;
 }
 .active {
@@ -60,6 +64,7 @@ $textColorActive: #7854f7;
  margin-bottom: 189px;
 
  button {
+  cursor: pointer;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -74,5 +79,11 @@ $textColorActive: #7854f7;
 
   border: 2px solid #7854f7;
   border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+   transition: all 0.3s ease-in-out;
+   color: #fff;
+   background: #7854f7;
+  }
  }
 }

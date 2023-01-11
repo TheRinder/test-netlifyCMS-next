@@ -76,7 +76,7 @@ const ContactForm = () => {
 
 export const ContactSection = () => {
   return (
-    <section className={style.formSection}>
+    <section className={style.formSection} id={'contact'}>
       <div className={"container"}>
         <div className={style.contactBox}>
           <h2 className={'sectionTitle'} style={{ color: '#fff', position: 'relative', zIndex: '3' }}>

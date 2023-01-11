@@ -226,7 +226,9 @@
  padding: 32px 0px 52px 0px;
  position: relative;
  margin-bottom: 204px;
-
+ h2 {
+  margin-bottom: 32px;
+ }
  p {
   font-weight: 700;
   font-size: 20px;
@@ -428,8 +430,9 @@
 
 .partnersGrid {
  margin-top: 80px;
- display: grid;
- grid-template-columns: repeat(3, 33.33%);
+ // display: grid;
+ // grid-template-columns: repeat(3, 33.33%);
+ display: flex;
 
  @media screen and (max-width: 1060px) {
   display: flex;
