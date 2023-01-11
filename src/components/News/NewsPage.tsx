@@ -4,6 +4,17 @@ import pattern from '../../icon/bluer-pattern.png'
 
 import { NewsListSection } from "./NewsListSection";
 
+export interface News {
+  data: {
+    date: string,
+    subText: string,
+    tag: string,
+    thumbnail: string
+    title: string
+  },
+  content: string
+}
+
 const NewsBanner = () => {
 
   return (
@@ -25,11 +36,11 @@ const NewsBanner = () => {
   )
 }
 
-export default function NewsPage() {
+export default function NewsPage({ news }: { news: News[] }) {
   return (
     <main>
       <NewsBanner />
-      <NewsListSection />
+      <NewsListSection news={news} />
     </main>
   )
 }

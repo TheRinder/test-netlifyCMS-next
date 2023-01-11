@@ -1,36 +1,21 @@
 import React, { useEffect } from 'react'
 import { NewsCard } from './NewsCard'
 import style from './news.module.scss';
+import { News } from './NewsPage';
 
-export const NewsListSection = () => {
+export const NewsListSection = ({ news }: { news: News[] }) => {
 
  return (
   <section className={style.newsContainer}>
    {
-    new Array(5).fill('').map((_, index) => {
+    news.map((item, index) => {
      return <NewsCard
       key={index}
       slug={`${index}`}
+      news={item}
      />
     })
    }
   </section>
  )
 }
-
-// export async function getStaticPaths() {
-//  const paths = getAllPostIds();
-//  return {
-//   paths,
-//   fallback: false,
-//  };
-// }
-
-// export async function getStaticProps() {
-//  const postData = getAllPostIds();
-//  return {
-//   props: {
-//    postData,
-//   },
-//  };
-// }
