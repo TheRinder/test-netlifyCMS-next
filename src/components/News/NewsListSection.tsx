@@ -1,10 +1,11 @@
 import React from 'react'
 import { NewsCard } from './NewsCard'
-import { listNews } from '../../../lib/news'
+import { getAllPostIds } from '../../../lib/news'
 import style from './news.module.scss';
 
-export const NewsListSection = () => {
- console.log(listNews);
+export const NewsListSection = ({ postData }) => {
+ console.log(postData);
+
  return (
   <section className={style.newsContainer}>
    {
@@ -17,4 +18,21 @@ export const NewsListSection = () => {
    }
   </section>
  )
+}
+
+// export async function getStaticPaths() {
+//  const paths = getAllPostIds();
+//  return {
+//   paths,
+//   fallback: false,
+//  };
+// }
+
+export async function getStaticProps() {
+ const postData = getAllPostIds();
+ return {
+  props: {
+   postData,
+  },
+ };
 }

@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { NavBar } from '../../../src/components/NavBar/NavBar'
 import { CategoryPage } from '../../../src/components/Areas/CategoryPage'
 import { BasicHead } from '../../../src/components/BasicHead'
-// import { getAllPostIds, getPostData } from '../../../lib/areas'
 import dynamic from 'next/dynamic'
 
 export default function Category() {

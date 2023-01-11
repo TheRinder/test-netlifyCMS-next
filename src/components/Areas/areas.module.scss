@@ -30,6 +30,10 @@
  display: flex;
  flex-wrap: nowrap;
  margin-top: 71px;
+ @media screen and (max-width: 1300px) {
+  flex-direction: column;
+  margin-top: 30px;
+ }
 }
 
 .areasHeader {
@@ -55,7 +59,12 @@
   }
  }
 }
-
+.areasBox {
+ @media screen and (max-width: 1200px) {
+  width: 100%;
+  overflow: hidden;
+ }
+}
 .areasCatergory {
  list-style: none;
  display: flex;
@@ -63,12 +72,20 @@
  justify-content: space-between;
  position: relative;
  z-index: 2;
+ @media screen and (max-width: 1200px) {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+ }
  a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  white-space: nowrap;
 
   padding: 12px 60px;
   background: #7854f7;
@@ -87,12 +104,29 @@
 }
 .asideBox {
  margin-right: 54px;
+ @media screen and (max-width: 1300px) {
+  margin-right: 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+ }
  ul {
+  @media screen and (max-width: 1300px) {
+   display: flex;
+  }
   list-style: none;
   li {
    max-width: 210px;
    width: 210px;
    margin-top: 54px;
+   @media screen and (max-width: 1300px) {
+    margin-top: 0px;
+    width: auto;
+    max-width: 100%;
+    margin-right: 40px;
+   }
    position: relative;
    &:hover {
     a {
@@ -124,6 +158,9 @@
 
     color: #7854f7;
     transition: all 0.3s ease-in-out;
+    @media screen and (max-width: 1300px) {
+     white-space: nowrap;
+    }
    }
   }
   li:first-child {
@@ -142,11 +179,17 @@
 }
 
 .PostContainer {
+ @media screen and (max-width: 1100px) {
+  margin-top: 32px;
+ }
  .PostContent {
   width: calc(1280px - 264px);
   padding: 16px;
   box-sizing: border-box;
   margin-bottom: 80px;
+  @media screen and (max-width: 1100px) {
+   width: 100%;
+  }
   p > img {
    max-width: 100%;
    margin: 20px 0px;
