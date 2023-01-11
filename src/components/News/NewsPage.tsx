@@ -25,7 +25,7 @@ const NewsBanner = () => {
   )
 }
 
-export default function NewsPage(props) {
+export default function NewsPage() {
   return (
     <main>
       <NewsBanner />

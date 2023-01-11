@@ -10,7 +10,7 @@ interface Catagory {
  title: string
 }
 
-const CATAGORY: Catagory[] = [
+export const CATAGORY: Catagory[] = [
  {
   id: 'business',
   title: 'Business advisory'
@@ -24,8 +24,8 @@ const CATAGORY: Catagory[] = [
   title: 'Financial advisory'
  },
  {
-  id: 'legalisation',
-  title: 'Legalisation'
+  id: 'legal',
+  title: 'Legal'
  },
  {
   id: 'digital',
@@ -41,7 +41,7 @@ const CategoryButton = (props: CategoryButtonType) => {
  const classes = clsx(props.activeId === props.id && style.activeLink)
  return (
   <li className={classes}>
-   <Link href={`/areas/${props.id}`}>
+   <Link href={`/services/${props.id}`}>
     <a>
      {props.title}
     </a>

@@ -40,9 +40,9 @@ const IconAndButton = ({ text, Icon }: { text: string, Icon: React.FunctionCompo
 
 const NAV_LINKS: NavLink[] = [
   {
-    id: 'service',
+    id: 'services',
     title: 'Services',
-    href: '/#service'
+    href: '/services'
   },
   // {
   //   id: 'areas',

@@ -1,10 +1,10 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import { NavBar } from '../../src/components/NavBar/NavBar'
-import { CategoryPage } from '../../src/components/Areas/CategoryPage'
 import { BasicHead } from '../../src/components/BasicHead'
+import { CategoryPage } from '../../src/components/Areas/CategoryPage'
+import { useRouter } from 'next/router'
 
-export default function Category() {
+export default function Services() {
  const router = useRouter()
  const { categoryid } = router.query
  return (

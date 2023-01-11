@@ -21,7 +21,7 @@ const PostAsideItem = (props: PostAsideItemType) => {
  const styleActive = clsx(props.active && style.activePost) 
  return (
   <li className={styleActive}>
-   <Link href={`/areas/${categoryid}/${props.slug}`}>
+   <Link href={`/services/${categoryid}/${props.slug}`}>
     <a>
      {props.title}
     </a>

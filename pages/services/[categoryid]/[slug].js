@@ -11,7 +11,7 @@ export default function Category() {
  const { categoryid, slug } = router.query
 
  const Post = dynamic(() =>
-  import(`../../../content/blog/${categoryid}/${slug}.md`).then((module) => module.react)
+  import(`../../../content/services/${categoryid}/${slug}.md`).then((module) => module.react)
  )
 
  return (
@@ -26,21 +26,3 @@ export default function Category() {
   </>
  )
 }
-
-// export async function getStaticPaths(props) {
-//  console.log(props);
-//  const paths = getAllPostIds('business')
-//  return {
-//   paths,
-//   fallback: false
-//  }
-// }
-
-// export async function getStaticProps({ params }) {
-//  const postData = getPostData(params.slug)
-//  return {
-//   props: {
-//    postData
-//   }
-//  }
-// }
