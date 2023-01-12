@@ -73,6 +73,27 @@ export const CircleHomeMobile = () => {
 
   )
 }
+export const CircleM = () => {
+  return (
+    <svg width="78" height="2886" viewBox="0 0 78 2886" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="4.12556" cy="4.14216" r="4.12556" fill="#7854F7" />
+      <circle cx="64.6335" cy="4.14216" r="4.12556" fill="#7854F7" />
+      <g opacity="0.56">
+        <circle cx="12.6336" cy="2821.13" r="4.12556" fill="#7854F7" />
+        <circle cx="73.1422" cy="2821.13" r="4.12556" fill="#7854F7" />
+        <circle cx="12.6336" cy="2881.63" r="4.12556" fill="#7854F7" />
+        <circle cx="73.1422" cy="2881.63" r="4.12556" fill="#7854F7" />
+      </g>
+      <circle cx="4.12556" cy="64.6505" r="4.12556" fill="#7854F7" />
+      <circle cx="64.6335" cy="64.6505" r="4.12556" fill="#7854F7" />
+      <circle cx="4.12556" cy="125.158" r="4.12556" fill="white" />
+      <circle cx="64.6335" cy="125.158" r="4.12556" fill="white" />
+      <circle cx="4.12556" cy="185.667" r="4.12556" fill="white" />
+      <circle cx="64.6335" cy="185.667" r="4.12556" fill="white" />
+    </svg>
+
+  )
+}
 export const CircleLogoIcon = () => {
   return (
     <svg width="485" height="500" viewBox="0 0 485 500" fill="none" xmlns="http://www.w3.org/2000/svg">

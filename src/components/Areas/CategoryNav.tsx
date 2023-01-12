@@ -7,29 +7,35 @@ import pattern from '../../icon/bluer-pattern.png'
 
 interface Catagory {
   id: string,
-  title: string
+  title: string,
+  href?: string
 }
 
 export const CATAGORY: Catagory[] = [
   {
     id: 'business',
-    title: 'Business advisory'
+    title: 'Business advisory',
+    href: '/services/business/business-planning'
   },
   {
     id: 'accounting-audit',
-    title: 'Accounting & Audit'
+    title: 'Accounting & Audit',
+    href: '/services/accounting-audit/accounting'
   },
   {
     id: 'financial',
-    title: 'Financial advisory'
+    title: 'Financial advisory',
+    href: '/services/financial/aml-kyc-fraud'
   },
   {
     id: 'legal',
-    title: 'Legal'
+    title: 'Legal',
+    href: '/services/legal/compliance-and-due-diligence'
   },
   {
     id: 'digital',
-    title: 'Digital'
+    title: 'Digital',
+    href: '/services/digital/crypto-blockchain'
   },
 ]
 
@@ -41,7 +47,7 @@ const CategoryButton = (props: CategoryButtonType) => {
   const classes = clsx(props.activeId === props.id && style.activeLink)
   return (
     <li className={classes}>
-      <Link href={`/services/${props.id}`}>
+      <Link href={props.href ? props.href : `/services/${props.id}`}>
         <a>
           {props.title}
         </a>

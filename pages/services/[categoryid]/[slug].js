@@ -9,17 +9,28 @@ export default function Category() {
  const router = useRouter()
  const { categoryid, slug } = router.query
 
- const Post = dynamic(() =>
-  import(`../../../content/services/${categoryid}/${slug}.md`).then((module) => module.react)
- )
-
+ if (categoryid && slug) {
+  const Post = dynamic(() =>
+   import(`../../../content/services/${categoryid}/${slug}.md`).then((module) => module.react)
+  )
+  return (
+   <>
+    <BasicHead />
+    <main >
+     <NavBar />
+     <CategoryPage categoryId={categoryid}>
+      <Post />
+     </CategoryPage>
+    </main>
+   </>
+  )
+ }
  return (
   <>
    <BasicHead />
    <main >
     <NavBar />
     <CategoryPage categoryId={categoryid}>
-     <Post />
     </CategoryPage>
    </main>
   </>

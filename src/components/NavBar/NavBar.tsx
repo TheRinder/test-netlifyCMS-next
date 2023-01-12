@@ -42,7 +42,7 @@ const NAV_LINKS: NavLink[] = [
   {
     id: 'services',
     title: 'Services',
-    href: '/services'
+    href: '/services/business/business-planning'
   },
   // {
   //   id: 'areas',
@@ -50,14 +50,9 @@ const NAV_LINKS: NavLink[] = [
   //   href: "/areas/"
   // },
   {
-    id: 'team',
-    title: 'Team',
-    href: '/#team'
-  },
-  {
     id: 'about',
     title: 'About Us',
-    href: '/#about'
+    href: '/about'
   },
   {
     id: 'news',
@@ -105,7 +100,7 @@ export const NavBar = () => {
             }
           </ul>
         </nav>
-        <div className={scss.locationBox}>
+        <div >
           {
             country.length !== 0 &&
             <IconAndButton text={country} Icon={LocationIcon} />

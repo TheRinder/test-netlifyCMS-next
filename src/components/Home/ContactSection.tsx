@@ -20,25 +20,14 @@ import Link from "next/link";
 const ContactForm = () => {
 
   const onSubmitForm = (event) => {
-    let req = ''
-
-    Object.entries(event).map(([key, value], index) => {
-      if (index !== Object.entries(event).length - 1) {
-        req += `${key}=${value}&`;
-      }
-      else {
-        req += `${key}=${value}`;
-      }
-
-    })
-
-    fetch("/", {
+    fetch("/sendMail/send.php", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: req,
+      body: JSON.stringify({ ...event }),
     })
       .then(() => alert("Form successfully submitted"))
       .catch((error) => alert(error));
+
   }
 
   return (

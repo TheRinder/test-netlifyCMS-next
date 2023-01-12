@@ -1,6 +1,6 @@
 import style from './home.module.scss'
 import pattern from '../../icon/bluer-pattern.png'
-import { CircleHome, CircleLogoIcon } from '../../icon/homeIcon'
+import { CircleHome, CircleLogoIcon, CircleM } from '../../icon/homeIcon'
 export const WhyUsSection = () => {
  return (
   <section className={style.whySection} id='#about'>
@@ -19,6 +19,9 @@ export const WhyUsSection = () => {
    </div>
    <span className={style.CircleFigureII}>
     <CircleHome />
+   </span>
+   <span className={style.CircleM}>
+    <CircleM />
    </span>
    <span className={style.whyBg}>
     <img src={pattern.src} alt="" />

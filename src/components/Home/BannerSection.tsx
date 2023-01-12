@@ -18,7 +18,7 @@ export const BannerSection = () => {
      The model allows us to provide one-stop-shop services, which makes them easier and unique for each of our clients.
     </p>
 
-    <Link href={'/services/business'}>
+    <Link href={'/services/business/business-planning'}>
      <a className={style.bannerLink}>
       See our areas
      </a>

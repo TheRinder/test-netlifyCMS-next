@@ -9,12 +9,12 @@ interface Partner {
 }
 const PARTNETS: Partner[] = [
   {
-    name: 'ten',
-    logo: './image/logo.png'
-  },
-  {
     name: 'kandk',
     logo: './image/kandkLogo.png'
+  },
+  {
+    name: 'ten',
+    logo: './image/logo.png'
   },
   {
     name: "lhv",

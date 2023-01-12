@@ -36,6 +36,11 @@ $textColorLang: #616161;
  div + div {
   margin-left: 56px;
  }
+ @media screen and (max-width:500px) {
+   p{
+    display: none;
+   }
+ }
 }
 
 .locationText {
