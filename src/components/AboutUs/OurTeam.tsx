@@ -3,97 +3,47 @@ import Link from "next/link";
 import clsx from "clsx";
 import { LinkedinIcon, TelegramIcon } from './icon'
 import style from './about.module.scss'
-import { type } from "os";
+import { Member } from "./AboutPage";
 
-interface Person {
- image?: string,
- name: string;
- profession: string,
- link:
- {
-  type: 'telegram' | 'linked',
-  link: string
- }[]
-}
 
-const PERSONEL: Person[] = [
- {
-  name: "Andrei Sribny",
-  image: './image/andrei.jpg',
-  profession: "Co-Founder and Finance/Audit Department Head",
-  link: [
-   {
-    type: 'telegram',
-    link: ''
-   },
-   {
-    type: 'linked',
-    link: 'https://ee.linkedin.com/in/andrei-sribny-18a506251'
-   }
-  ]
- },
- {
-  name: "Igor Penkov",
-  image: './image/igor.png',
-  profession: "Co-Founder and Legal Department Head",
-  link: [
-   {
-    type: 'telegram',
-    link: ''
-   },
-   {
-    type: 'linked',
-    link: 'https://www.linkedin.com/in/igor-penkov-181138195/'
-   }
-  ]
- },
- {
-  name: "Georgi Aksjonov",
-  image: './image/georgi.jpg',
-  profession: "Business consulting and Legal Department Head",
-  link: [
-   {
-    type: 'telegram',
-    link: ''
-   },
-   {
-    type: 'linked',
-    link: 'https://www.linkedin.com/in/gaksjonov/'
-   }
-  ]
- }
-]
 
-const Personel = (props: Person) => {
- const { image, name, profession, link } = props
+
+const Personel = (props: Member) => {
+ const { avatar, name, position, socialLink } = props
+
  return (
   <div className={style.teamCard}>
    <div className={style.teamImgBox}>
-    <img src={image} alt="" />
+    <img src={avatar} alt="" />
    </div>
    <div className={style.teamName}>
     <p>{name}</p>
    </div>
    <div className={style.teamProf}>
     <p>
-     {profession}
+     {position}
     </p>
    </div>
    <div className={style.teamLink}>
     <ul>
      {
-      link.map((l, i) => {
-       if (l.type === 'linked') {
+      socialLink.map((l, i) => {
+       if (l.type === 'linkedIn') {
         return (
          <li key={i}>
           <Link href={l.link}>
            <a target={'_blank'}>
-            {/* {
-            l.type === 'telegram' && <TelegramIcon />
-           } */}
-            {
-             l.type === 'linked' && <LinkedinIcon />
-            }
+            <LinkedinIcon />
+           </a>
+          </Link>
+         </li>
+        )
+       } if (l.type === 'telegram') {
+        return (
+         <li key={i}>
+          <Link href={l.link}>
+           <a target={'_blank'}>
+            <TelegramIcon />
            </a>
           </Link>
          </li>
@@ -110,7 +60,8 @@ const Personel = (props: Person) => {
  )
 }
 
-export const OurTeam = () => {
+export const OurTeam = ({ team }: { team: { member: Member }[] }) => {
+
  return (
   <section className={clsx(style.teamSection)}>
    <div className="container">
@@ -120,7 +71,7 @@ export const OurTeam = () => {
     </h2>
     <div className={style.teamBox}>
      {
-      PERSONEL.map((item, index) => <Personel key={index} {...item} />)
+      team.map((item, index) => <Personel key={index} {...item.member} />)
      }
     </div>
     <div className={style.teamPostText}>

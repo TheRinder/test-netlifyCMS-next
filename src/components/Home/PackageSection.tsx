@@ -8,6 +8,7 @@ import {
  AdvancedProIcon
 } from '../../icon/PackagesIcon'
 import clsx from 'clsx'
+import { useRouter } from 'next/router'
 
 
 interface Package {
@@ -64,10 +65,15 @@ const PACKAGE: Package[] = [
  },
 ]
 
-const PackageCard = (props: Package) => {
+type PackageCardProps = {
+ onClick: () => void;
+} & Package
+
+const PackageCard = (props: PackageCardProps) => {
  const { label,
   advantages,
   subText,
+  onClick,
   price,
   icon } = props
  return (
@@ -89,7 +95,7 @@ const PackageCard = (props: Package) => {
      </ul>
     </div>
     <div className={style.packageCardBtnBox}>
-     <button>
+     <button onClick={() => { onClick() }}>
       Get started
      </button>
     </div>
@@ -100,6 +106,10 @@ const PackageCard = (props: Package) => {
 
 export const PackageSection = () => {
  const classes = clsx("container", style.packageContainer)
+ const router = useRouter()
+ const onClick = () => {
+  router.push('/#contact', undefined, { scroll: true })
+ }
  return (
   <section className={classes}>
    <h2 className={'sectionTitle'}>
@@ -108,7 +118,7 @@ export const PackageSection = () => {
    <div className={style.packageBox}>
     {
      PACKAGE.map(item => <div key={item.id}>
-      <PackageCard {...item} />
+      <PackageCard {...item} onClick={onClick} />
      </div>
      )
     }

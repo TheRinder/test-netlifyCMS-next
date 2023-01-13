@@ -6,7 +6,7 @@ import { BasicHead } from '../src/components/BasicHead'
 export default function Areas() {
  return (
   <>
-  <BasicHead />
+   <BasicHead />
    <main >
     <NavBar />
     <CategoryPage />

@@ -37,9 +37,9 @@ collections:
               fields:
                 - { label: "Name", name: "name", widget: "string"}
                 - { label: "Avatar", name: "avatar", widget: "image"}
-                - { label: "Position", name: "Position", widget: "text"}
+                - { label: "Position", name: "position", widget: "text"}
                 - label: "Link"
-                  name: "Link"
+                  name: "socialLink"
                   widget: list
                   fields:
                     - label: "Type Link"
