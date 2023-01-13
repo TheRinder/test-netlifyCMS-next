@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  # name: test-repo
+  # name: git-gateway
+  name: test-repo
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
@@ -12,17 +12,23 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
+        - label: 'Partners'
+          name: "partners"
+          widget: list
+          fields:
+            - { label: "Logo", name: "logo", widget: "image"}
+            - { label: "Description", name: "description", widget: "text"}
         - label: 'Testimonials'
-          name: "Testimonials"
+          name: "testimonials"
           widget: list
           fields:
             - label: 'Author'
-              name: "Author"
+              name: "author"
               widget: "object"
               fields:
                 - { label: "Name", name: "name", widget: "string"}
                 - { label: "Avatar", name: "avatar", widget: "image"}
-            - { label: "Text", name: "Text", widget: "text"}
+            - { label: "Text", name: "text", widget: "text"}
     - label: "About"
       name: "about"
       file: "content/about.md"

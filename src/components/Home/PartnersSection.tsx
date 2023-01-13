@@ -2,37 +2,22 @@ import React from 'react'
 import style from './home.module.scss'
 import logoPlaceholder from '../../icon/LOGO.png'
 import clsx from 'clsx'
+import { Partner } from './HomePage'
 
-interface Partner {
-  name: string,
-  logo: string,
-}
-const PARTNETS: Partner[] = [
-  {
-    name: 'kandk',
-    logo: './image/kandkLogo.png'
-  },
-  {
-    name: 'ten',
-    logo: './image/logo.png'
-  },
-  {
-    name: "lhv",
-    logo: './image/lhv-logo.png'
-  }
-]
+
+
 
 const PartnerCard = (props: Partner) => {
-  const { name, logo } = props
+  const { description, logo } = props
   const imgUrl = logo.length === 0 ? logoPlaceholder.src : logo
   return (
     <div className={style.partnerItem}>
-      <img src={imgUrl} alt={name} />
+      <img src={imgUrl} alt={description} />
     </div>
   )
 }
 
-export const PartnersSection = () => {
+export const PartnersSection = ({ partners }: { partners: Partner[] }) => {
   const classes = clsx('sectionTitle', style.partnerTitle)
   return (
     <section className={style.partnersBox}>
@@ -42,7 +27,7 @@ export const PartnersSection = () => {
         </h2>
         <div className={style.partnersGrid}>
           {
-            PARTNETS.map((item, i) => <PartnerCard key={i} {...item} />)
+            partners.map((item, i) => <PartnerCard key={i} {...item} />)
           }
         </div>
       </div>

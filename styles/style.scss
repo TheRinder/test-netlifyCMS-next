@@ -87,3 +87,74 @@ $textColorActive: #7854f7;
   }
  }
 }
+
+.slick-slider {
+ width: 100%;
+}
+.myArrowSlick {
+ background: none;
+ border: none;
+ position: absolute;
+ cursor: pointer;
+ bottom: -24px;
+}
+
+@keyframes NextArrow {
+ 0% {
+  transform: translateX(0px);
+ }
+ 50% {
+  transform: translateX(5px);
+ }
+ 100% {
+  transform: translateX(0px);
+ }
+}
+
+@keyframes NextArrowActive {
+ from {
+  transform: translateX(0px);
+ }
+ to {
+  transform: translateX(15px);
+ }
+}
+
+@keyframes PrevArrow {
+ 0% {
+  transform: rotateY(180deg) translateX(0px);
+ }
+ 50% {
+  transform: rotateY(180deg) translateX(5px);
+ }
+ 100% {
+  transform: rotateY(180deg) translateX(0px);
+ }
+}
+@keyframes PrevArrowActive {
+ from {
+  transform: rotateY(180deg) translateX(0px);
+ }
+ to {
+  transform: rotateY(180deg) translateX(15px);
+ }
+}
+
+.myArrowNext {
+ right: 0px;
+ &:active svg {
+  animation: NextArrowActive 0.5s !important;
+ }
+ &:hover svg {
+  animation: NextArrow 2s infinite ease-in-out;
+ }
+}
+.myArrowPrev {
+ right: 54px;
+ &:active svg {
+  animation: PrevArrowActive 0.5s !important;
+ }
+ &:hover svg {
+  animation: PrevArrow 2s infinite ease-in-out;
+ }
+}

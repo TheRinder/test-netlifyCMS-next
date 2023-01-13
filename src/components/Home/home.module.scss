@@ -494,6 +494,14 @@
 
 .testimonialBox {
  margin-bottom: 152px;
+ background: linear-gradient(
+  180deg,
+  rgba(236, 240, 253, 0) 0%,
+  rgba(236, 240, 253, 0.53) 14.32%,
+  #ecf0fd 45.83%,
+  rgba(236, 240, 253, 0.43) 84.33%,
+  rgba(236, 240, 253, 0) 100%
+ );
 
  .testimonialTitle {
   text-align: left;
@@ -519,8 +527,8 @@
  .commentBox {
   display: flex;
   gap: 32px;
-  width: 1147px;
-  margin: 0px auto;
+  // width: 1147px;
+  // margin: 0px auto;
 
   @media screen and (max-width: 1280px) {
    width: 100%;
@@ -529,13 +537,18 @@
 
   .testimonialCard {
    background: #ffffff;
-   box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+   box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
    border-radius: 20px;
    padding: 24px;
    box-sizing: border-box;
+   margin: 35px 26px;
 
    @media screen and (max-width: 1280px) {
     margin-bottom: 24px;
+   }
+
+   @media screen and (max-width: 750px) {
+    margin: 35px 8px 24px 8px;
    }
 
    .testimonialCardAuthor {
@@ -577,6 +590,10 @@
      font-size: 12px;
      line-height: 22px;
      color: #94a2b3;
+     height: 95px;
+
+     overflow: hidden;
+     text-overflow: ellipsis;
     }
    }
   }
@@ -685,7 +702,7 @@
 }
 
 .contactInfoBox {
- width: 324px;
+ width: 360px;
  margin-left: auto;
 
  @media screen and (max-width: 990px) {
