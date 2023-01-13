@@ -14,4 +14,11 @@ team:
       Link:
         - type: linkedIn
           link: https://www.linkedin.com/in/igor-penkov-181138195/
+  - member:
+      name: Georgi Aksjonov
+      Position: Business consulting and Legal Department Head
+      avatar: img/georgi.jpg
+      Link:
+        - type: linkedIn
+          link: https://www.linkedin.com/in/gaksjonov/
 ---
