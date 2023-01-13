@@ -5,7 +5,20 @@ import { Author } from "../Home/TestimonialsSection";
 import style from './news.module.scss';
 import { News } from "./NewsPage";
 
-
+const MONTH = [
+ "January",
+ 'February',
+ 'March',
+ 'April',
+ 'May',
+ 'June',
+ 'July',
+ 'August',
+ 'September',
+ 'October',
+ 'November',
+ 'December',
+]
 
 const NewsImage = ({ source, size }: { source?: string, size: string }) => {
  const imgUrl = source ? source : `https://via.placeholder.com/${size}`
@@ -40,6 +53,11 @@ export const NewsCard = ({ slug, news }: { slug: string, news: News }) => {
   return false
  }, [router.query])
 
+ const ParseDate = (d: string) => {
+  const date = new Date(d);
+  return `${MONTH[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+ }
+
  const onClickCard = (link: string) => {
   router.push(`?post=${link}`, undefined, { scroll: false })
  }
@@ -56,7 +74,7 @@ export const NewsCard = ({ slug, news }: { slug: string, news: News }) => {
       <p className={style.cardTag}>
        {data.tag}
       </p>
-      <p className={style.cardDate}>{data.date} </p>
+      <p className={style.cardDate}>{ParseDate(data.date)} </p>
      </div>
      <h3
       onClick={() => {
@@ -80,7 +98,7 @@ export const NewsCard = ({ slug, news }: { slug: string, news: News }) => {
     </div>
    }
    <div className={style.newsAuthorBox}>
-    <NewsAuthor name="Th. Rinder" picture={undefined} />
+    <NewsAuthor name={data.Author.name} picture={data.Author.avatar} />
     {
      openTest &&
      <button

@@ -84,6 +84,7 @@
   .newsTypography {
    box-sizing: border-box;
    margin-right: 65px;
+   width: 100%;
    @media screen and (max-width: 750px) {
     order: 2;
     margin-right: 0px;

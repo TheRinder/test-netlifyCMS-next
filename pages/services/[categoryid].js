@@ -7,7 +7,6 @@ import { BasicHead } from '../../src/components/BasicHead'
 export default function Category() {
  const router = useRouter()
  const { categoryid } = router.query
- console.log(categoryid);
  return (
   <>
    <BasicHead />

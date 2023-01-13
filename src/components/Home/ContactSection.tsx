@@ -34,7 +34,7 @@ const ContactForm = () => {
     <Form
       onSubmit={onSubmitForm}
       render={({ handleSubmit }) => (
-        <form onSubmit={handleSubmit} data-netlify="true">
+        <form onSubmit={handleSubmit}>
           <div className={style.formContainer}>
             <div className={style.formInput}>
               <Field name='name' component={"input"} type="text" placeholder="Name" />

@@ -4,13 +4,19 @@ import pattern from '../../icon/bluer-pattern.png'
 
 import { NewsListSection } from "./NewsListSection";
 
+export interface Author {
+  name: string
+  avatar: string,
+}
+
 export interface News {
   data: {
     date: string,
     subText: string,
     tag: string,
     thumbnail: string
-    title: string
+    title: string,
+    Author: Author
   },
   content: string
 }
