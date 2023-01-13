@@ -64,4 +64,9 @@ testimonials:
     text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to
+  - author:
+      name: K. Halchuk
+      avatar: https://phonoteka.org/uploads/posts/2021-07/1625684522_13-phonoteka-org-p-kot-s-sigaretoi-art-krasivo-14.jpg
+    text: This is an excellent firm, responsive team, quick turnaround, quality is
+      top notch. Thank you very much!
 ---
