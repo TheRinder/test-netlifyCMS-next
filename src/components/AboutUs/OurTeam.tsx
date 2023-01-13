@@ -3,6 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { LinkedinIcon, TelegramIcon } from './icon'
 import style from './about.module.scss'
+import { type } from "os";
 
 interface Person {
  image?: string,
@@ -27,7 +28,7 @@ const PERSONEL: Person[] = [
    },
    {
     type: 'linked',
-    link: ''
+    link: 'https://ee.linkedin.com/in/andrei-sribny-18a506251'
    }
   ]
  },
@@ -42,7 +43,7 @@ const PERSONEL: Person[] = [
    },
    {
     type: 'linked',
-    link: ''
+    link: 'https://www.linkedin.com/in/igor-penkov-181138195/'
    }
   ]
  },
@@ -57,7 +58,7 @@ const PERSONEL: Person[] = [
    },
    {
     type: 'linked',
-    link: ''
+    link: 'https://www.linkedin.com/in/gaksjonov/'
    }
   ]
  }
@@ -82,20 +83,24 @@ const Personel = (props: Person) => {
     <ul>
      {
       link.map((l, i) => {
-       return (
-        <li key={i}>
-         <Link href={l.link}>
-          <a>
-           {
+       if (l.type === 'linked') {
+        return (
+         <li key={i}>
+          <Link href={l.link}>
+           <a target={'_blank'}>
+            {/* {
             l.type === 'telegram' && <TelegramIcon />
-           }
-           {
-            l.type === 'linked' && <LinkedinIcon />
-           }
-          </a>
-         </Link>
-        </li>
-       )
+           } */}
+            {
+             l.type === 'linked' && <LinkedinIcon />
+            }
+           </a>
+          </Link>
+         </li>
+        )
+       } else {
+        return null
+       }
       }
       )
      }

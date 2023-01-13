@@ -12,15 +12,41 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
+        - label: 'Testimonials'
+          name: "Testimonials"
           widget: list
           fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+            - label: 'Author'
+              name: "Author"
+              widget: "object"
+              fields:
+                - { label: "Name", name: "name", widget: "string"}
+                - { label: "Avatar", name: "avatar", widget: "image"}
+            - { label: "Text", name: "Text", widget: "text"}
+    - label: "About"
+      name: "about"
+      file: "content/about.md"
+      fields:
+        - label: 'Team'
+          name: "team"
+          widget: list
+          fields:
+            - label: "Member"
+              name: "member"
+              widget: "object"
+              fields:
+                - { label: "Name", name: "name", widget: "string"}
+                - { label: "Avatar", name: "avatar", widget: "image"}
+                - { label: "Position", name: "Position", widget: "text"}
+                - label: "Link"
+                  name: "Link"
+                  widget: list
+                  fields:
+                    - label: "Type Link"
+                      name: "type"
+                      widget: "select"
+                      options: ["telegram", "linkedIn"]
+                    - { label: "Link", name: "link", widget: "text" }
   - label: "Business advisory"
     name: "Areas_business_advisory"
     folder: "content/services/business"
@@ -82,4 +108,11 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Sub text", name: "subText", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - label: 'Author'
+        name: "Author"
+        widget: "object"
+        fields:
+          - { label: "Name", name: "name", widget: "string"}
+          - { label: "Avatar", name: "avatar", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      
