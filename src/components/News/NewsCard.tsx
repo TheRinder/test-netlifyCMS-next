@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { CloseIcon } from "../../icon/homeIcon";
-import { Author } from "../Home/TestimonialsSection";
+// import { Author } from "../Home/TestimonialsSection";
 import style from './news.module.scss';
-import { News } from "./NewsPage";
+import { Author, News } from "./NewsPage";
 
 const MONTH = [
  "January",
@@ -28,11 +28,11 @@ const NewsImage = ({ source, size }: { source?: string, size: string }) => {
 }
 
 const NewsAuthor = (props: Author) => {
- const { name, picture } = props
+ const { name, avatar } = props
  return (
   <div className={style.newsAuthor}>
    <div className={style.newsAuthorBoxImage}>
-    <NewsImage source={picture} size='44' />
+    <NewsImage source={avatar} size='44' />
    </div>
    <p className={style.newsAuthorName}>
     {name}
@@ -98,7 +98,7 @@ export const NewsCard = ({ slug, news }: { slug: string, news: News }) => {
     </div>
    }
    <div className={style.newsAuthorBox}>
-    <NewsAuthor name={data.Author.name} picture={data.Author.avatar} />
+    <NewsAuthor name={data.Author.name} avatar={data.Author.avatar} />
     {
      openTest &&
      <button
