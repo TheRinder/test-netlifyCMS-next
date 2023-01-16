@@ -15,6 +15,8 @@ Having business model & plan will help you to:
 * Get financing from banks and government institutions
 * Attract investors and quality partners
 
+
+
 ### Key points through which we help companies
 
 Once again taking into account the details, Circon’s team develops a model and a plan that would help depending on the target. 
@@ -38,7 +40,5 @@ This stage is direct to interact with the human factor, potential investors, the
 ### The final stage
 
 By the final verdict, we give the company the main advice on the introduction of their project to the market, it is all kinds of options offline and online strategy and a specific market under the project.
-
-
 
 ### Feel free to reach our specialist!
