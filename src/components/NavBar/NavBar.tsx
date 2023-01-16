@@ -38,6 +38,14 @@ const IconAndButton = ({ text, Icon }: { text: string, Icon: React.FunctionCompo
   )
 }
 
+const NavMenuMobile = () => {
+  return (
+    <div>
+
+    </div>
+  )
+}
+
 const NAV_LINKS: NavLink[] = [
   {
     id: 'services',
@@ -66,11 +74,25 @@ const NAV_LINKS: NavLink[] = [
   },
 ]
 
+const MenuIcon = () => {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fillRule="evenodd" clipRule="evenodd" d="M3.59998 5.9998C3.59998 5.68154 3.7264 5.37632 3.95145 5.15128C4.17649 4.92623 4.48172 4.7998 4.79998 4.7998H19.2C19.5182 4.7998 19.8235 4.92623 20.0485 5.15128C20.2735 5.37632 20.4 5.68154 20.4 5.9998C20.4 6.31806 20.2735 6.62329 20.0485 6.84833C19.8235 7.07338 19.5182 7.1998 19.2 7.1998H4.79998C4.48172 7.1998 4.17649 7.07338 3.95145 6.84833C3.7264 6.62329 3.59998 6.31806 3.59998 5.9998ZM3.59998 11.9998C3.59998 11.6815 3.7264 11.3763 3.95145 11.1513C4.17649 10.9262 4.48172 10.7998 4.79998 10.7998H12C12.3182 10.7998 12.6235 10.9262 12.8485 11.1513C13.0735 11.3763 13.2 11.6815 13.2 11.9998C13.2 12.3181 13.0735 12.6233 12.8485 12.8483C12.6235 13.0734 12.3182 13.1998 12 13.1998H4.79998C4.48172 13.1998 4.17649 13.0734 3.95145 12.8483C3.7264 12.6233 3.59998 12.3181 3.59998 11.9998ZM3.59998 17.9998C3.59998 17.6815 3.7264 17.3763 3.95145 17.1513C4.17649 16.9262 4.48172 16.7998 4.79998 16.7998H19.2C19.5182 16.7998 19.8235 16.9262 20.0485 17.1513C20.2735 17.3763 20.4 17.6815 20.4 17.9998C20.4 18.3181 20.2735 18.6233 20.0485 18.8483C19.8235 19.0734 19.5182 19.1998 19.2 19.1998H4.79998C4.48172 19.1998 4.17649 19.0734 3.95145 18.8483C3.7264 18.6233 3.59998 18.3181 3.59998 17.9998Z" fill="#7854F7" />
+    </svg>
+  )
+}
 
 export const NavBar = () => {
   const styleComponent = clsx('container', scss.headerContainer)
   const { locale, pathname } = useRouter()
   const [country, setCountry] = React.useState<string>("")
+  const [openMenu, setOpenMenu] = React.useState<boolean>(false)
+
+  const menuOnChange = () => {
+    console.log(openMenu);
+
+    setOpenMenu(!openMenu)
+  }
 
   React.useEffect(() => {
     if (country.length === 0) {
@@ -86,7 +108,14 @@ export const NavBar = () => {
   return (
     <header className={scss.header}>
       <div className={styleComponent}>
-        <div>
+        <div className={scss.logoBox}>
+          <div className={scss.mobileBtn}>
+            <button onClick={() => {
+              menuOnChange()
+            }}>
+              <MenuIcon />
+            </button>
+          </div>
           <Link href={'/'} scroll={true}>
             <a>
               <LogoIcon />
@@ -107,6 +136,22 @@ export const NavBar = () => {
           }
           {/* <IconAndButton text={locale} Icon={LangIcon} /> */}
         </div>
+      </div>
+      <div className={clsx(scss.navMobile, openMenu && scss.openNavMobile)}>
+        <nav className={scss.navMobileBox}>
+          <ul>
+            {
+              NAV_LINKS.map((link, i) => <NavLink key={link.id} {...link} isActive={pathname.split('/')[1] === link.id} />)
+            }
+            {/* <li className={scss.navMobileBtnClose}>
+              <button onClick={() => { setOpenMenu(false) }}>
+                <svg style={{ transform: 'rotateY(180deg)' }} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M3.70716 11.1771C3.3078 11.2321 3 11.5795 3 11.9999C3 12.4585 3.36631 12.8302 3.81818 12.8302H18.1999L13.0047 18.0813L12.9253 18.1743C12.687 18.4989 12.7124 18.9602 13.0023 19.2556C13.3212 19.5805 13.8392 19.5816 14.1594 19.258L20.7477 12.5996C20.787 12.5614 20.8224 12.5194 20.8536 12.474C21.0766 12.1498 21.0452 11.6999 20.7593 11.4111L14.1593 4.74193L14.0674 4.66174C13.7466 4.42125 13.2921 4.44905 13.0023 4.74446C12.6834 5.06942 12.6845 5.59515 13.0047 5.91871L18.2012 11.1696L3.81818 11.1696L3.70716 11.1771Z" fill="#7854F7" />
+                </svg>
+              </button>
+            </li> */}
+          </ul>
+        </nav>
       </div>
     </header>
   )
