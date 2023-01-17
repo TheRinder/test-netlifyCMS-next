@@ -72,7 +72,8 @@ $textColorLang: #616161;
 .navMobile {
   display: none;
   @media screen and (max-width: 690px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 78px;
     bottom: 0px;
@@ -84,7 +85,7 @@ $textColorLang: #616161;
   }
 }
 .openNavMobile {
-  display: block;
+  display: flex;
   transition: all 0.3s ease-in-out;
   transform: translateX(0%);
 }
@@ -97,15 +98,33 @@ $textColorLang: #616161;
   ul li a {
     display: block;
     padding: 16px 8px;
+
+    font-size: 16px;
+    line-height: 20px;
+    color: #424242;
   }
-  // .navMobileBtnClose {
-  //   display: flex;
-  //   justify-content: flex-end;
-  //   button {
-  //     display: block;
-  //     cursor: pointer;
-  //     border: none;
-  //     background: none;
-  //   }
+}
+.navMobileBtnClose {
+  padding-top: 24px;
+  margin: auto 24px 16px 24px;
+  box-sizing: border-box;
+  border-top: 1px solid #D0D5DD;
+  // &::after{
+  //   content: ;
   // }
+  button {
+    display: block;
+    width: 100%;
+    background: #7854f7;
+    border-radius: 4px;
+    padding: 6px 0px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+  }
 }
