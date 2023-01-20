@@ -42,7 +42,15 @@ $textColorLang: #616161;
     }
   }
 }
-
+.logoColor {
+  svg path {
+    fill: #2c2c2c;
+  }
+  svg path:nth-child(10),
+  svg path:nth-child(11) {
+    fill: #5E18EC;
+  }
+}
 .locationText {
   margin-left: 7px;
   font-weight: 600;
@@ -108,7 +116,7 @@ $textColorLang: #616161;
   padding-top: 24px;
   margin: auto 24px 16px 24px;
   box-sizing: border-box;
-  border-top: 1px solid #D0D5DD;
+  border-top: 1px solid #d0d5dd;
   // &::after{
   //   content: ;
   // }

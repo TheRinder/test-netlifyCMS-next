@@ -146,7 +146,7 @@ export const NavBar = () => {
             </button>
           </div>
           <Link href={'/'} scroll={true}>
-            <a>
+            <a className={scss.logoColor}>
               <LogoIcon />
             </a>
           </Link>
