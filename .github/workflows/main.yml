@@ -26,6 +26,14 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    
+    - name: Cache .next
+      uses: actions/cache@v2
+      with:
+        path: .next
+        key: ${{ runner.os }}-next-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-next-
 
   deploy:
     needs: build
@@ -54,6 +62,14 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    
+    - name: Cache .next
+      uses: actions/cache@v2
+      with:
+        path: .next
+        key: ${{ runner.os }}-next-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-next-
     
     - name: Setup rsync  
       run: rsync -avz --exclude=.github --exclude=.git -e "ssh -v" ${GITHUB_WORKSPACE} ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/
