@@ -2,6 +2,9 @@ backend:
   # name: git-gateway
   name: github
   repo: kandkteam/circons
+  api_root: https://api.github.com
+  base_url: https://api.github.com
+  site_domain: https://circonsgroup.com
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
