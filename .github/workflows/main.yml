@@ -1,0 +1,37 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build application
+      run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup SSH
+      run: ssh-keyscan -t rsa ${{secrets.REMOTE_HOST}} >> ~/.ssh/known_hosts
+
+    - name: Copy built files
+      run: rsync -avz --exclude=.github --exclude=node_modules --exclude=.git -e "ssh -i ${{ secrets.SSH_PRIVATE_KEY }}" / ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/circons
+
+    - name: Login to remote server and reload app
+      run: ssh -i $${{secrets.SSH_PRIVATE_KEYS}} ${{secrets.USER}}@${{secrets.REMOTE_HOST}} "cd projects/circons && pm2 reload ecosystem.config.js"
