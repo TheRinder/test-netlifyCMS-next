@@ -38,7 +38,7 @@ jobs:
   
     
     - name: Setup rsync  
-    - uses: GuillaumeFalourd/setup-rsync@v1.1
+      uses: GuillaumeFalourd/setup-rsync@v1.1
     - run: rsync -avz --exclude=.github --exclude=node_modules --exclude=.git -e "ssh -v" / ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/circons
 
     - name: Login to remote server and reload app
