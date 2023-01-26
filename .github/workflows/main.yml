@@ -70,6 +70,7 @@ jobs:
       run: ssh ${{secrets.USER}}@${{secrets.REMOTE_HOST}} "cd projects/circons && pm2 reload ecosystem.config.js"
   
   cleanup-runner-cache:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
