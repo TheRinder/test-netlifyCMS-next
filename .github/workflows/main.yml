@@ -40,7 +40,7 @@ jobs:
       run: sudo apt-get install -y rsync
     
     - name: Setup rsync  
-      run: rsync -avz --exclude=.github --exclude=node_modules --exclude=.git -e "ssh -v" ${GITHUB_WORKSPACE} ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/circons
+      run: rsync -avz --exclude=.github --exclude=node_modules --exclude=.git -e "ssh -v" ${GITHUB_WORKSPACE} ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/
 
     - name: Login to remote server and reload app
       run: ssh ${{secrets.USER}}@${{secrets.REMOTE_HOST}} "cd projects/circons && pm2 reload ecosystem.config.js"
