@@ -17,7 +17,7 @@ export default function News({ news }) {
  return (
   <>
    <>
-    <BasicHead />
+    <BasicHead title="Circon's - news" />
     <main >
      <NavBar />
      <NewsPage news={news} />

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 
 export const BasicHead = ({ title }: { title?: string }) => {
- let publicUrl: string = 'https://kandk-web-circons.netlify.app/'
+ let publicUrl: string = 'https://circonsgroup.com/'
  return (
   <Head>
    <title>{title ? title : "Circon's - Your circle of experts!"}</title>
