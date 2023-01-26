@@ -43,13 +43,13 @@ const ContactForm = () => {
               <Field name='phone' component={"input"} type="text" placeholder="Phone" />
             </div>
             <div className={style.formInput}>
-              <Field name='email' component={"input"} type="email" placeholder="Mail" />
+              <Field name='email' component={"input"} type="email" placeholder="E-mail" />
             </div>
             <div className={style.formInput}>
               <Field name='country' component={"input"} type="text" placeholder="Country" />
             </div>
             <div className={style.formInput}>
-              <Field name="comment" component={"textarea"} placeholder="Text" />
+              <Field name="comment" component={"textarea"} placeholder="Tell us how we could help you" />
             </div>
             <div className={style.formBtn}>
               <button type="submit" onSubmit={handleSubmit}>
