@@ -38,7 +38,10 @@ export default function HomePage(props: HomePageProps) {
       <WhyUsSection />
       <PackageSection />
       <PartnersSection partners={props.partners} />
-      <TestimonialsSection testimonials={props.testimonials} />
+      {
+        props.testimonials.length >= 2 &&
+        <TestimonialsSection testimonials={props.testimonials} />
+      }
       <ContactSection />
       <div className='btnGoUp'>
         <button onClick={() => ScrollToTop()}>

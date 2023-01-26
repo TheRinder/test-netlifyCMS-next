@@ -24,7 +24,7 @@ interface Package {
 const PACKAGE: Package[] = [
  {
   id: 0,
-  label: "Circon Basic",
+  label: "Circon Basic ",
   advantages: [
    'Incorporation of LTD',
    'Accounting',
