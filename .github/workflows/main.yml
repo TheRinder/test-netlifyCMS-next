@@ -36,8 +36,10 @@ jobs:
     - name: Adding Known Hosts
       run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }}  >> ~/.ssh/known_hosts
   
-    - name: Copy built files
-      run: rsync -avz --exclude=.github --exclude=node_modules --exclude=.git -e "ssh -v" / ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/circons
+    
+    - name: Setup rsync  
+    - uses: GuillaumeFalourd/setup-rsync@v1.1
+    - run: rsync -avz --exclude=.github --exclude=node_modules --exclude=.git -e "ssh -v" / ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/circons
 
     - name: Login to remote server and reload app
       run: ssh ${{secrets.USER}}@${{secrets.REMOTE_HOST}} "cd projects/circons && pm2 reload ecosystem.config.js"
