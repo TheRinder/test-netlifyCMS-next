@@ -18,6 +18,14 @@ jobs:
 
     - name: Build application
       run: npm run build
+    
+    - name: Cache node_modules
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
   deploy:
     needs: build
@@ -38,6 +46,14 @@ jobs:
   
     - name: Install rsync
       run: sudo apt-get install -y rsync
+    
+    - name: Cache node_modules
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     
     - name: Setup rsync  
       run: rsync -avz --exclude=.github --exclude=.git -e "ssh -v" ${GITHUB_WORKSPACE} ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/
