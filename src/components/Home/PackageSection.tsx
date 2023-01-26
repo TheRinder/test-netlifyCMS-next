@@ -24,7 +24,7 @@ interface Package {
 const PACKAGE: Package[] = [
  {
   id: 0,
-  label: "Citron Basic",
+  label: "Circon Basic",
   advantages: [
    'Incorporation of LTD',
    'Accounting',
@@ -36,7 +36,7 @@ const PACKAGE: Package[] = [
  },
  {
   id: 1,
-  label: "Citron Advanced",
+  label: "Circon Advanced",
   advantages: [
    'Incorporation of LTD',
    'Accounting',
@@ -50,7 +50,7 @@ const PACKAGE: Package[] = [
  },
  {
   id: 2,
-  label: "Citron Advanced Pro",
+  label: "Circon Advanced Pro",
   advantages: [
    'Incorporation of LTD',
    'Accounting',
