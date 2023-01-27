@@ -64,7 +64,7 @@ jobs:
         key: next-${{github.run_id}}
     
     - name: Setup rsync  
-      run: rsync -avz --exclude=.github --exclude=.git -e "ssh -v" ${GITHUB_WORKSPACE} ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/
+      run: rsync -avz --exclude=.github --exclude=.git -e "ssh -v" ${GITHUB_WORKSPACE} ${{secrets.USER}}@${{secrets.REMOTE_HOST}}:/home/${{secrets.USER}}/projects/ --delete-after
 
     - name: Login to remote server and reload app
       run: ssh ${{secrets.USER}}@${{secrets.REMOTE_HOST}} "cd projects/circons && pm2 reload ecosystem.config.js"
