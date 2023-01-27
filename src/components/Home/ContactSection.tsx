@@ -17,22 +17,52 @@ import { Form, Field } from "react-final-form";
 import Link from "next/link";
 
 
-const ContactForm = () => {
+const access_key = "a506489c-3de3-4827-aea0-86ecc0eacaa7"
+// const access_key_test = "4827a253-b76b-4170-9126-43dbca96cce1"
 
-  const onSubmitForm = (event) => {
-    fetch("/sendMail/send.php", {
+const Notif = ({ tag }: { tag: boolean }) => {
+  return (
+    <div className={clsx(style.notif, tag && style.activeNotif)}>
+      <p className={style.notifText}>
+        form submit - done
+      </p>
+    </div>
+  )
+}
+
+const ContactForm = ({ onNotif }: { onNotif: () => void }) => {
+  // const { country } = usePageContext()
+
+  const initialValue = React.useMemo(() => {
+    return {
+      name: '',
+      phone: '',
+      email: '',
+      country: '',
+      comment: ''
+    }
+  }, [])
+
+  const onSubmitForm = async (event) => {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({ ...event }),
-    })
-      .then(() => alert("Form successfully submitted"))
-      .catch((error) => alert(error));
-
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ access_key: access_key, ...event }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      onNotif()
+    }
   }
+
 
   return (
     <Form
       onSubmit={onSubmitForm}
+      initialValues={{ ...initialValue }}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <div className={style.formContainer}>
@@ -64,6 +94,18 @@ const ContactForm = () => {
 }
 
 export const ContactSection = () => {
+
+  const [notif, setNotif] = React.useState<boolean>(false)
+
+  React.useEffect(() => {
+    if (notif) {
+      const timer = setTimeout(() => {
+        setNotif(false)
+      }, 1800);
+      return () => clearTimeout(timer);
+    }
+  }, [notif]);
+
   return (
     <section className={style.formSection} id={'contact'}>
       <div className={"container"}>
@@ -72,7 +114,7 @@ export const ContactSection = () => {
             Contact Form
           </h2>
           <div className={style.flexContant}>
-            <ContactForm />
+            <ContactForm onNotif={() => { setNotif(true) }} />
             <div className={style.contactInfoBox}>
               <div className={style.contactInfoLine}>
                 <p>
@@ -157,6 +199,7 @@ export const ContactSection = () => {
       <span className={style.formFigure}>
         <FigureForm />
       </span>
+      <Notif tag={notif} />
     </section >
   )
 }

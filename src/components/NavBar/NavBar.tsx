@@ -7,6 +7,7 @@ const VisitorAPI = require("visitorapi");
 
 import { LocationIcon } from '../../icon/headerIcon'
 import { useRouter } from 'next/router'
+import { usePageContext } from '../../context/state'
 
 type NavLink = {
   subMenu?: ({ subMenu?: NavItem[] } & NavItem)[]
@@ -114,9 +115,10 @@ const MenuIcon = () => {
 }
 
 export const NavBar = () => {
+  const { setGCountry, country } = usePageContext()
+
   const styleComponent = clsx('container', scss.headerContainer)
   const { locale, pathname } = useRouter()
-  const [country, setCountry] = React.useState<string>("")
   const [openMenu, setOpenMenu] = React.useState<boolean>(false)
 
   const menuOnChange = () => {
@@ -128,7 +130,7 @@ export const NavBar = () => {
       VisitorAPI(
         "SDSL2GEyDIbjsiv2nfCO",
         data => {
-          setCountry(data.countryName);
+          setGCountry(data.countryName)
         }
       );
     }
