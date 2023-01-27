@@ -3,6 +3,7 @@ backend:
   name: github
   repo: kandkteam/circons
   site_domain: circonsgroup.com
+  base_url: https://circonsgroup.com/
   api_root: https://api.github.com
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
