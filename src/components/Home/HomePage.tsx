@@ -39,7 +39,7 @@ export default function HomePage(props: HomePageProps) {
       <PackageSection />
       <PartnersSection partners={props.partners} />
       {
-        props.testimonials.length >= 2 &&
+        props.testimonials.length >= 3 &&
         <TestimonialsSection testimonials={props.testimonials} />
       }
       <ContactSection />
