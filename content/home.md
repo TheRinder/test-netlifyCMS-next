@@ -18,9 +18,4 @@ testimonials:
       name: Джордж
       avatar: img/georgi.jpg
     text: Отличная команда, нравится страдать
-  - author:
-      name: K. Halchuk
-      avatar: https://phonoteka.org/uploads/posts/2021-07/1625684522_13-phonoteka-org-p-kot-s-sigaretoi-art-krasivo-14.jpg
-    text: This is an excellent firm, responsive team, quick turnaround, quality is
-      top notch. Thank you very much!
 ---
