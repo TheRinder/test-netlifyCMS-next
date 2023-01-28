@@ -131,7 +131,8 @@ export const NavBar = () => {
         , {
           method: 'GET',
           headers: {
-            'Content-Type': 'application/json',
+            "Accept": "applications/json",
+            "Content-Type": "application/json"
           },
         }
       );

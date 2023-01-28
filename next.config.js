@@ -6,7 +6,7 @@ const nextConfig = {
   // },
   reactStrictMode: true,
 
-  webpack: (cfg) => {
+  webpack: (cfg, opt) => {
     cfg.module.rules.push(
       {
         test: /\.md$/,
@@ -14,7 +14,10 @@ const nextConfig = {
         options: { mode: ['react-component'] }
       }
     ),
-    cfg.resolve.fallback = { fs: false };
+      cfg.resolve.fallback = { fs: false };
+    if (!opt.dev) {
+      cfg.devtool = opt.isServer ? false : 'source-map';
+    }
     return cfg;
   },
 }
