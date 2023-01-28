@@ -127,7 +127,7 @@ export const NavBar = () => {
 
   const testJson = async () => {
     try {
-      const req = await fetch('https://ipinfo.io/json?token=a826e80bbf58f7'
+      const req = await fetch('https://ipinfo.io/json/?token=a826e80bbf58f7'
         , {
           method: 'GET',
           headers: {
