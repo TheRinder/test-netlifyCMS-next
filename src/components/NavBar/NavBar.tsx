@@ -125,16 +125,38 @@ export const NavBar = () => {
     setOpenMenu(!openMenu)
   }
 
-  React.useEffect(() => {
-    if (country.length === 0) {
-      VisitorAPI(
-        "SDSL2GEyDIbjsiv2nfCO",
-        data => {
-          setGCountry(data.countryName)
+  const testJson = async () => {
+    try {
+      const req = await fetch('https://ipinfo.io/json?token=a826e80bbf58f7'
+        , {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
         }
       );
+      if (req.status !== 404) {
+        const data = await req.json()
+        console.log(data);
+      }
+    } catch (error) {
+      console.log(error);
     }
+  }
+
+  React.useEffect(() => {
+    testJson()
   }, [])
+  // React.useEffect(() => {
+  //   if (country.length === 0) {
+  //     VisitorAPI(
+  //       "SDSL2GEyDIbjsiv2nfCO",
+  //       data => {
+  //         setGCountry(data.countryName)
+  //       }
+  //     );
+  //   }
+  // }, [])
 
   return (
     <header className={scss.header}>
