@@ -127,20 +127,24 @@ export const NavBar = () => {
 
   const testJson = async () => {
     try {
-      const req = await fetch('https://ipinfo.io/json/?token=a826e80bbf58f7'
-        , {
-          method: 'GET',
-          headers: {
-            "Accept": "applications/json",
-            "Content-Type": "application/json",
-            "Authorization": "Bearer a826e80bbf58f7"
-          },
-        }
-      );
-      if (req.status !== 404) {
-        const data = await req.json()
-        console.log(data);
-      }
+      // const req = await fetch('https://ipinfo.io/json/?token=a826e80bbf58f7'
+      //   , {
+      //     method: 'GET',
+      //     headers: {
+      //       "Accept": "applications/json",
+      //       "Content-Type": "application/json",
+      //       "Authorization": "Bearer a826e80bbf58f7"
+      //     },
+      //   }
+      // );
+      // if (req.status !== 404) {
+      //   const data = await req.json()
+      //   console.log(data);
+      // }
+      const request = await fetch("https://ipinfo.io/json?token=a826e80bbf58f7")
+      const jsonResponse = await request.json()
+
+      console.log(jsonResponse.ip, jsonResponse.country)
     } catch (error) {
       console.log(error);
     }
